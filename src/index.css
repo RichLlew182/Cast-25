@@ -4,6 +4,9 @@
 
 :root {
 
+    --bodyFont: 'Prompt', sans-serif;
+    --headingFont: 'Syne', sans-serif;
+
     --bg-licorice: #1F1300;
     --color-licorice: #1F1300;
 
@@ -19,6 +22,22 @@
     --bg-white: #ffffff;
     --color-white: #ffffff;
 
+}
+
+body {
+    font-family: var(--bodyFont);
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--headingFont);
+    font-weight: 600;
+    font-variant-numeric: lining-nums;
 }
 
 /* Background colors */
