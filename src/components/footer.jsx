@@ -26,7 +26,7 @@ export function FooterBottom({ footerRef }) {
               start: '-50% bottom',
               end: 'bottom 70%',
                 scrub: true,
-                markers: true,
+                // markers: true,
             },
           });
         });
