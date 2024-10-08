@@ -3,10 +3,10 @@
 
 import { Footer } from "flowbite-react";
 
-export function FooterBottom() {
+export function FooterBottom({ footerRef }) {
   return (
       <Footer className="flex flex-col bg-licorice text-white rounded-none  font-syne lining-nums font-semibold p-0">
-          <div id="footerTop" className=" w-full">
+          <div id="footerTop" ref={footerRef} className=" w-full">
               <div className="container flex mx-auto justify-center py-24 md:py-48 px-6">
                   <a className="text-4xl sm:text-6xl xl:text-8xl text-white" href="mailto:hello@cast25.com?subject=Hello CAST25"><span>hello</span><span className="text-tomato">@</span><span>cast25.com</span></a></div>
           </div>
