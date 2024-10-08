@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+
+    --bg-licorice: #1F1300;
+    --color-licorice: #1F1300;
+
+    --bg-tomato: #F2613F;
+    --color-tomato: #F2613F;
+
+    --bg-orange: #FF7F11;
+    --color-orange: #FF7F11;
+
+    --bg-snow: #FBF5F3;
+    --color-snow: #FBF5F3;
+
+    --bg-white: #ffffff;
+    --color-white: #ffffff;
+
+}
+
+/* Background colors */
+.bg-licorice {
+    background-color: var(--bg-licorice);
+}
+
+.bg-tomato {
+    background-color: var(--bg-tomato);
+}
+
+.bg-orange {
+    background-color: var(--bg-orange);
+}
+
+.bg-snow {
+    background-color: var(--bg-snow);
+}
+
+.bg-white {
+    background-color: var(--bg-white);
+}
+
+/* Text colors */
+.text-licorice {
+    color: var(--color-licorice);
+}
+
+.text-tomato {
+    color: var(--color-tomato);
+}
+
+.text-orange {
+    color: var(--color-orange);
+}
+
+.text-snow {
+    color: var(--color-snow);
+}
+
+.text-white {
+    color: var(--color-white);
+}
