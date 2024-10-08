@@ -16,7 +16,6 @@ export function FooterBottom({ footerRef }) {
     useGSAP(
       () => {
             const boxes = gsap.utils.toArray('.box');
-            console.log(boxes)
         boxes.forEach((box) => {
           gsap.to(box, {
               x: 0,
