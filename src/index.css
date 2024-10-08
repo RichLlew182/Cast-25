@@ -40,44 +40,25 @@ h6 {
     font-variant-numeric: lining-nums;
 }
 
-/* Background colors */
-.bg-licorice {
-    background-color: var(--bg-licorice);
+/* Custom CSS */
+
+.fa-circle-arrow-up {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s;
 }
 
-.bg-tomato {
-    background-color: var(--bg-tomato);
+a:hover .fa-circle-arrow-up {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
-.bg-orange {
-    background-color: var(--bg-orange);
-}
-
-.bg-snow {
-    background-color: var(--bg-snow);
-}
-
-.bg-white {
-    background-color: var(--bg-white);
-}
-
-/* Text colors */
-.text-licorice {
-    color: var(--color-licorice);
-}
-
-.text-tomato {
-    color: var(--color-tomato);
-}
-
-.text-orange {
-    color: var(--color-orange);
-}
-
-.text-snow {
-    color: var(--color-snow);
-}
-
-.text-white {
-    color: var(--color-white);
+nav a {
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s;
 }
