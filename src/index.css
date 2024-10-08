@@ -51,6 +51,9 @@ h6 {
     transition: ease .3s;
 }
 
+a {
+    align-items: center;
+
 a:hover {
     text-decoration: none !important;
 }
