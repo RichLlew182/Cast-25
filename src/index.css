@@ -51,6 +51,10 @@ h6 {
     transition: ease .3s;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
 a:hover .fa-circle-arrow-up {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
@@ -61,4 +65,9 @@ nav a {
     -webkit-transition: ease .3s;
     -o-transition: ease .3s;
     transition: ease .3s;
+}
+
+#navbarToggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }

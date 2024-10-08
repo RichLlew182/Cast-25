@@ -1,5 +1,7 @@
 "use client";
 import { Navbar } from "flowbite-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export function MainMenu() {
   return (
@@ -7,9 +9,9 @@ export function MainMenu() {
       <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-4xl font-syne font-semibold lining-nums">CAST25</span>
       </Navbar.Brand>
-      <Navbar.Toggle />
+      <Navbar.Toggle id="navbarToggle" className="p-0 text-licorice focus:border-none  focus:outline-none focus:shadow-none hover:bg-transparent"/>
       <Navbar.Collapse className="font-syne font-medium">
-        <Navbar.Link className="text-2xl text-licorice md:hover:text-white"href="#footerTop">Get in touch</Navbar.Link>
+        <Navbar.Link className="px-0 flex gap-2 text-2xl text-licorice md:hover:text-white"href="#footerTop">Get in touch <FontAwesomeIcon icon={faCircleArrowUp} /></Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
