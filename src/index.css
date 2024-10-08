@@ -71,3 +71,31 @@ nav a {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+span {
+    display: inline-block;
+}
+
+span.box-left {
+    -webkit-transform: translate(-150px, 0px);
+    -ms-transform: translate(-150px, 0px);
+    transform: translate(-150px, 0px);
+}
+
+span.box-right {
+    -webkit-transform: translate(150px, 0px);
+    -ms-transform: translate(150px, 0px);
+    transform: translate(150px, 0px);
+}
+
+@media (max-width : 767px) {
+
+    span.box-left,
+    span.box-right {
+        -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+
+
+}
