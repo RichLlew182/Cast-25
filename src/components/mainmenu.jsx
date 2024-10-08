@@ -5,7 +5,7 @@ import { Navbar } from "flowbite-react";
 
 export function MainMenu() {
   return (
-    <Navbar className="px-0 absolute w-full bg-tomato"fluid>
+    <Navbar className="py-6 sm:px-6 bg-tomato"fluid>
 
     <div className="container max-w-[1320px] px-6 mx-auto">
         <Navbar.Brand  href="/">
