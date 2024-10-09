@@ -52,6 +52,8 @@ h6 {
 }
 
 a {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -96,9 +98,9 @@ span.box-right {
 
     span.box-left,
     span.box-right {
-        -webkit-transform: translate(0px, 0px);
-        -ms-transform: translate(0px, 0px);
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px) !important;
+        -ms-transform: translate(0px, 0px) !important;
+        transform: translate(0px, 0px) !important;
     }
 
 

@@ -29,8 +29,8 @@ export default function Home() {
           <MainMenu className="fade" scrollToFooter={scrollToFooter}/>
         </header>
   
-      <main ref={container} className="container mx-auto flex  min-h-screen flex-col justify-center items-start gap-6 px-6">
-        <h1 className="fade text-4xl sm:text-6xl xl:text-8xl dark:text-white">Dynamic and versatile project delivery consultancy</h1>
+      <main ref={container} className="container mx-auto flex  min-h-screen flex-col justify-center items-start gap-6 py-32 px-6">
+        <h1 className="fade text-4xl lg:text-6xl xl:text-8xl dark:text-white">Dynamic and versatile project delivery consultancy</h1>
         <h2 className="fade text-3xl  xl:text-4xl dark:text-white">Website coming soon</h2>
           <a href="#"onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-licorice hover:text-white">
         Get in touch <FontAwesomeIcon icon={faCircleArrowUp} /></a>
