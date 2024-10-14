@@ -22,7 +22,7 @@ const customTheme = {
   },
 };
 
-export function MainMenu( {scrollToFooter}) {
+export function MainMenu( {scrollTo, refs}) {
   return (
 
 
@@ -34,11 +34,11 @@ export function MainMenu( {scrollToFooter}) {
       </Navbar.Brand>
       <Navbar.Toggle id="navbarToggle" className="xl:hidden p-0 text-licorice focus:border-none  focus:outline-none focus:shadow-none hover:bg-transparent"/>
       <Navbar.Collapse className="xl:my-0 h-screen xl:h-auto font-syne font-medium">
-        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">What we do</Navbar.Link>
-        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">How we do it</Navbar.Link>
-        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Who we've worked with</Navbar.Link>
-        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Testimonials</Navbar.Link>
-       <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></Navbar.Link>
+        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollTo(refs.workWithUs) }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">What we do</Navbar.Link>
+        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollTo("footer") }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">How we do it</Navbar.Link>
+        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollTo("footer") }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Who we've worked with</Navbar.Link>
+        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollTo("footer") }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Testimonials</Navbar.Link>
+       <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></Navbar.Link>
       </Navbar.Collapse>
       </Navbar>
       </header>
