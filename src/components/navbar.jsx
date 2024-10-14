@@ -5,6 +5,8 @@ import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export function MainMenu( {scrollToFooter}) {
   return (
+
+    <header className="absolute w-full">
     <Navbar  fluid rounded className="container py-12 px-6 sm:px-6 mx-auto bg-transparent">
       <Navbar.Brand href="/">
         <span className="self-center whitespace-nowrap text-4xl font-syne font-semibold lining-nums">CAST25</span>
@@ -17,6 +19,7 @@ export function MainMenu( {scrollToFooter}) {
         <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="px-0 flex gap-2 text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Testimonials</Navbar.Link>
        <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); scrollToFooter() }} className="px-0 flex gap-2 text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></Navbar.Link>
       </Navbar.Collapse>
-    </Navbar>
+      </Navbar>
+      </header>
   );
 }
