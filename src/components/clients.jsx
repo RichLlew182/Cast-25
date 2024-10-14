@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, {useEffect} from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -9,47 +9,50 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Clients({ refs }) {
 
-  const clientsContainer = useRef();
+  useEffect(() => {
 
-  useGSAP(
-    () => {
+    const clients1 = document.querySelector('#clients-1');
+    const clients2 = document.querySelector('#clients-2');
 
-      gsap.set('#clients-1', { x: '-200%' });
-gsap.set('#clients-2', { x: '200%' });
-        
-        gsap.to('#clients-1', {
-          x: 0,
-            delay: 0,
-          scrollTrigger: {
-            trigger: '#who-weve-done-it-for',
-            start: 'top 80%',
-            end: 'bottom 20%',
-              scrub: true,
-             markers: true,
-          },
-        });
-      
-        gsap.to('#clients-2', {
-          x: '-100%',
-            delay: 1,
-          scrollTrigger: {
-            trigger: '#who-weve-done-it-for',
-            start: 'top 80%',
-            end: 'bottom 20%',
-              scrub: true,
-             markers: true,
-          },
-        });
-      
-    },
-    { scope: clientsContainer }
-  );
+    if (clients1 && clients2) {
+      gsap.set(clients1, { x: '-100%' });
+      gsap.set(clients2, { x: '0%' });
+
+      gsap.to(clients1, {
+        x: '-75%',
+        scrollTrigger: {
+          trigger: '#clients',
+          start: 'top 90%',
+          end: 'bottom 10%',
+          scrub: true,
+          // markers: true,
+        },
+      });
+
+      gsap.to(clients2, {
+        x: '-25%',
+        scrollTrigger: {
+          trigger: '#clients',
+          start: 'top 90%',
+          end: 'bottom 10%',
+          scrub: true,
+          // markers: true,
+        },
+      });
+    }
+
+    // Cleanup function to kill scroll triggers on component unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []); // Empty
+  ;
 
   return (
     <>
 
-      <section ref={refs.clients} id="who-weve-done-it-for" className="bg-tomato">
-        <div ref={clientsContainer} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 xl:gap-24 px-6">
+      <section  id="clients" className="bg-tomato">
+        <div ref={refs.clients} className="clients-container container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 xl:gap-24 px-6">
           <h2 className="box fade text-4xl sm:text-5xl lg:text-6xl dark:text-white">Who we've worked with</h2>
 
           <div id="clients-1" className="clients-marquee relative flex flex-row gap-6 md:gap-x-40">
