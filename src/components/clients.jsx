@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function BelowFold({refs}) {
+export default function Clients({refs}) {
 
     const container = useRef();
 
@@ -32,9 +32,9 @@ export default function BelowFold({refs}) {
     return (
       <>
   
-      <section ref={refs.workWithUs}id="working-with-us" className="bg-snow">
+      <section ref={refs.clients}id="who-weve-done-it-for" className="bg-tomato">
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 :gap-20 px-6">
-          <h2 className="box fade text-4xl sm:text-5xl lg:text-6xl dark:text-white">What working with us is like</h2>
+          <h2 className="box fade text-4xl sm:text-5xl lg:text-6xl dark:text-white">Who we've worked with</h2>
           
             <div className=" flex flex-col lg:flex-row gap-6 md:gap-12">
               
