@@ -67,6 +67,10 @@ a:hover .fa-circle-arrow-up {
     transform: rotate(180deg);
 }
 
+section {
+    overflow: hidden;
+}
+
 nav a {
     -webkit-transition: ease .3s;
     -o-transition: ease .3s;
@@ -93,6 +97,18 @@ span.box-right {
     -ms-transform: translate(150px, 0px);
     transform: translate(150px, 0px);
 }
+
+/* #clients-1 {
+    -webkit-transform: translate(-200%, 0px);
+    -ms-transform: translate(-200%, 0px);
+    transform: translate(-200%, 0px);
+}
+
+#clients-2 {
+    -webkit-transform: translate(200%, 0px);
+    -ms-transform: translate(200%, 0px);
+    transform: translate(200%, 0px);
+} */
 
 @media (max-width : 767px) {
 
