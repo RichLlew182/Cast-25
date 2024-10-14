@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,20 +35,45 @@ export default function WhatWeDo({refs}) {
       <>
   
       <section ref={refs.whatWeDo}id="what-we-do" className="bg-licorice text-white">
-        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 px-6">
-          <h2 className="box fade text-4xl sm:text-5xl lg:text-6xl dark:text-white">What we do</h2>
+        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start py-20 xl:py-36 gap-12  px-6">
           
+        
+              <h2 className="box text-4xl sm:text-5xl lg:text-6xl font-semibold w-full">What we do</h2>
             <div className=" flex flex-col lg:flex-row gap-6 md:gap-12">
-              
-              <div className="box flex flex-col bg-white p-12 md:p-20 gap-6">
-                <img src="/images/client-logos/RCSE.png" height="158" width="370" alt="Royal College of Surgeons of England Logo" />
-                <blockquote className="text-xl">“Andy was brilliant. He closed a complex project calmly and to clear timescales and we'd recommend him to anyone.”</blockquote>
-                <p className="text-2xl font-bold font-syne">James Pearson-Jadwat</p></div>
-              <div className="box flex flex-col bg-white  p-12 md:p-20 gap-6">
-                <img src="/images/client-logos/discovery-channel.png" height="157" width="370" alt="Discovery Channel Logo" />
-                <blockquote className="text-xl">“Chris did a stellar job of building rapport with teams and gets the tough stuff done on time, on budget and with a keen attention to detail.”</blockquote>
-                <p className="text-2xl font-bold font-syne">Andrew Shields</p></div>
+              <div className="box flex flex-col px-0  gap-6 w-1/2">
+                <h3 className="box text-white text-3xl sm:text-4xl lg:text-5xl font-semibold cursor-pointer">Digital project management</h3>
+                <hr className="box" />
+                <h3 className="box text-gray-400 text-3xl sm:text-4xl lg:text-5xl font-semibold cursor-pointer">Creative Production</h3>
+                <hr className="box"/>
+                <a href="#"onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="box fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
+                Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
+              </div>
+              <div className="flex flex-col p-0 w-1/2">
+              <ul id="projectManagementList" className="flex  flex-col gap-6">
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Website builds / redesigns</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Content and tech migrations</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Rebranding projects</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Localisation</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Digital marketing activity</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Email marketing campaigns</li>
+                </ul>
+                
+                <ul id="creativeProductionList" className="flex-col gap-6 hidden active:flex">
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Website builds / redesigns</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Content and tech migrations</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Rebranding projects</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Localisation</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Digital marketing activity</li>
+                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Email marketing campaigns</li>
+              </ul>
+                 
+              </div>
+
+
+
             </div>
+
+            
            
         </div>
         </section>

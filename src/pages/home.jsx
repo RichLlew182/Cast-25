@@ -22,7 +22,9 @@ export default function Home() {
   }
   
     const scrollTo = (ref) => {
-      ref.current?.scrollIntoView({ behavior: 'smooth' });
+      ref.current?.scrollIntoView({ behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest', });
     };
   
     return (
@@ -32,11 +34,11 @@ export default function Home() {
   
         <AboveFold scrollTo={scrollTo} refs={refs}/>
         <main>
-          <BelowFold refs={refs} />
-          <WhatWeDo refs={refs} />
-          <HowWeDoIt refs={refs} />
-          <Clients refs={refs} />
-          <Testimonials refs={refs} />
+          <BelowFold scrollTo={scrollTo} refs={refs} />
+          <WhatWeDo scrollTo={scrollTo} refs={refs} />
+          <HowWeDoIt scrollTo={scrollTo} refs={refs} />
+          <Clients scrollTo={scrollTo} refs={refs} />
+          <Testimonials scrollTo={scrollTo} refs={refs} />
         </main>
      
         <FooterBottom refs={refs}/>

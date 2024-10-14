@@ -7,7 +7,7 @@ import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Clients({ refs }) {
+export default function Clients({ scrollTo, refs }) {
 
   useEffect(() => {
 
