@@ -102,6 +102,11 @@ nav a {
 #navbarToggle {
     -webkit-box-shadow: none;
     box-shadow: none;
+    z-index: 10;
+}
+
+.logo {
+    z-index: 10;
 }
 
 span {
@@ -129,12 +134,47 @@ span.box-right {
     transition: opacity 0.5s ease, height 0.5s ease;
 }
 
+
 #what-we-do ul.active {
     opacity: 1 !important;
-    height: auto !important;
+    height: auto !important
 }
 
+
 @media (max-width : 767px) {
+
+    .nav {
+        opacity: 1;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        overflow: hidden;
+        -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+        transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+        -o-transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+        position: absolute;
+        top: 0;
+    }
+
+    .nav.open {
+        opacity: 1;
+        -webkit-transform: translateX(00%);
+        -ms-transform: translateX(00%);
+        transform: translateX(00%);
+        -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+        transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+        -o-transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: var(--bg-tomato);
+        left: 0;
+        right: 0;
+    }
 
     span.box-left,
     span.box-right {

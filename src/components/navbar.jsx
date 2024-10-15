@@ -7,11 +7,11 @@ import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 const customTheme = {
   navbar: {
     collapse: {
-      base: "w-full xl:block xl:w-auto test",
+      base: "nav w-full xl:block xl:w-auto",
       list: "my-0 h-full flex flex-col justify-center xl:my-0 xl:flex-row xl:space-x-7",
       hidden: {
-        "on": "hidden",
-        "off": ""
+        "on": "",
+        "off": "open"
       }
     },
 
@@ -29,11 +29,11 @@ export function MainMenu( {scrollTo, refs}) {
     <Flowbite theme={{ theme: customTheme }}>
     <header className="absolute w-full bg-tomato z-10 ">
     <Navbar  fluid rounded className="container py-12 px-6 sm:px-6 mx-auto bg-transparent">
-      <Navbar.Brand href="/">
+      <Navbar.Brand href="/" className="logo">
         <span className="self-center whitespace-nowrap text-4xl font-syne font-semibold lining-nums">CAST25</span>
       </Navbar.Brand>
       <Navbar.Toggle id="navbarToggle" className="xl:hidden p-0 text-licorice focus:border-none  focus:outline-none focus:shadow-none hover:bg-transparent"/>
-      <Navbar.Collapse className="xl:my-0 h-screen xl:h-auto font-syne font-medium">
+      <Navbar.Collapse className="container px-6 xl:px-0 xl:my-0 h-screen xl:h-auto xl:me-0 font-syne font-medium">
         <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.whatWeDo) }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">What we do</Navbar.Link>
         <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.howWeDoIt) }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">How we do it</Navbar.Link>
         <Navbar.Link href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.clients) }} className="font-bold xl:font-medium px-0 md:py-2 xl:py-0 flex gap-2 text-4xl xl:text-xl text-licorice md:hover:text-white hover:bg-transparent border-none">Who we've worked with</Navbar.Link>

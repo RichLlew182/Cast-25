@@ -83,7 +83,7 @@ export default function WhatWeDo({scrollTo, refs}) {
         
               <h2 className="box text-4xl sm:text-5xl lg:text-6xl font-semibold w-full">What we do</h2>
             <div className=" flex flex-col lg:flex-row gap-6 md:gap-12">
-              <div className="box flex flex-col px-0  gap-6 w-1/2">
+              <div className="box flex flex-col px-0  gap-6 w-full lg:w-1/2">
                 <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active box text-gray-400 text-3xl sm:text-4xl lg:text-5xl font-semibold cursor-pointer">Digital project management</h3>
                 <hr ref={hr1Ref} className="active box" />
                 <h3 ref={button2Ref} onClick={() => handleActive(2)} className="box text-gray-400 text-3xl sm:text-4xl lg:text-5xl font-semibold cursor-pointer">Creative Production</h3>
@@ -91,7 +91,7 @@ export default function WhatWeDo({scrollTo, refs}) {
                 <a href="#"onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="box fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
                 Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
               </div>
-              <div className="flex flex-col p-0 w-1/2">
+              <div className="flex flex-col p-0 w-full lg:w-1/2">
               <ul ref={listRef1} id="projectManagementList" className="active flex flex-col gap-6">
                   <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Website builds / redesigns</li>
                   <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Content and tech migrations</li>
