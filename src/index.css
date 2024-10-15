@@ -45,6 +45,18 @@ h6 {
 
 /* Custom CSS */
 
+.active {
+    color: var(--color-white)
+}
+
+hr {
+    border-color: var(--bg-licorice);
+}
+
+hr.active {
+    border-color: var(--bg-white);
+}
+
 .fa-circle-arrow-up {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -101,17 +113,15 @@ span.box-right {
     transform: translate(150px, 0px);
 }
 
-/* #clients-1 {
-    -webkit-transform: translate(-200%, 0px);
-    -ms-transform: translate(-200%, 0px);
-    transform: translate(-200%, 0px);
+#what-we-do ul {
+    display: none;
 }
 
-#clients-2 {
-    -webkit-transform: translate(200%, 0px);
-    -ms-transform: translate(200%, 0px);
-    transform: translate(200%, 0px);
-} */
+#what-we-do ul.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 
 @media (max-width : 767px) {
 
