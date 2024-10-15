@@ -7,7 +7,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function HowWeDoIt({refs}) {
+export default function HowWeDoIt({scrollTo, refs}) {
 
     const container = useRef();
 
