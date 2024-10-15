@@ -9,23 +9,28 @@ import Clients from "../components/clients";
 import Testimonials from "../components/testimonials";
 
 export default function Home() {
-
+  
   const refs = {
-
+  
     footer: useRef(null),
     workWithUs: useRef(null),
     whatWeDo: useRef(null),
     howWeDoIt: useRef(null),
     clients: useRef(null),
     testimonials: useRef(null)
-
+  
   }
   
-    const scrollTo = (ref) => {
-      ref.current?.scrollIntoView({ behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest', });
-    };
+   const scrollTo = (refs) => {
+     if (!refs) return
+     
+   const element = refs.current?.getBoundingClientRect().top + window.scrollY
+
+   window.scroll({
+     top: element,
+     behavior: "smooth"
+   })
+ }
   
     return (
       <>

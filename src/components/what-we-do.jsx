@@ -45,7 +45,7 @@ export default function WhatWeDo({refs}) {
                 <hr className="box" />
                 <h3 className="box text-gray-400 text-3xl sm:text-4xl lg:text-5xl font-semibold cursor-pointer">Creative Production</h3>
                 <hr className="box"/>
-                <a href="#"onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="box fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
+                <a href="#"onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="box fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
                 Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
               </div>
               <div className="flex flex-col p-0 w-1/2">
