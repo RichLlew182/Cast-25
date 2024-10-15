@@ -2,31 +2,13 @@
 import { Flowbite, Navbar } from "flowbite-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
-
-
-const customTheme = {
-  navbar: {
-    collapse: {
-      base: "nav w-full xl:block xl:w-auto",
-      list: "my-0 h-full flex flex-col justify-center xl:my-0 xl:flex-row xl:space-x-7",
-      hidden: {
-        "on": "",
-        "off": "open"
-      }
-    },
-
-    toggle: {
-      base: 'text-white hover:bg-blue-700 focus:ring-blue-300', // Custom styles for toggle button
-    },
-    
-  },
-};
+import CustomTheme from "../theme/customTheme";
 
 export function MainMenu( {scrollTo, refs}) {
   return (
 
 
-    <Flowbite theme={{ theme: customTheme }}>
+    <Flowbite theme={{ theme: CustomTheme }}>
     <header className="absolute w-full bg-tomato z-10 ">
     <Navbar  fluid rounded className="container py-12 px-6 sm:px-6 mx-auto bg-transparent">
       <Navbar.Brand href="/" className="logo">

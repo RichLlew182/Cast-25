@@ -2,40 +2,24 @@
 import React from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Carousel, Flowbite} from "flowbite-react";
+import { Carousel, Flowbite } from "flowbite-react";
+import CustomTheme from "../theme/customTheme";
 
 gsap.registerPlugin(ScrollTrigger)
 
 "use client";
 
-const customTheme = {
-  carousel: {
-    root: {
-    leftControl: "controls absolute left-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none",
-    rightControl: "controls absolute right-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none"
-  },
-    indicators: {
-      active: {
-        off: "bg-licorice",
-        on: "bg-tomato"
-      },
-    
-    },
-  }
-};
-
-
 
 export default function Testimonials({refs}) {
 
   return (
-   <section ref={refs.testimonials}className="bg-snow" id="testimonials">
+   <section ref={refs.testimonials}className="bg-snow cursor-auto" id="testimonials">
       
       <div className="container mx-auto flex  flex-col justify-center items-start  gap-14 py-20 xl:py-36  px-6">
 
       <h2 className="box fade text-4xl sm:text-5xl lg:text-6xl dark:text-white">Testimonials</h2>
         
-      <Flowbite theme={{ theme: customTheme }}>
+      <Flowbite theme={{ theme: CustomTheme }}>
           <Carousel slideInterval={5000} indicators={false} className="h-auto">
           <div className=" flex flex-col h-auto items-start justify-start text-4xl font-syne font-semibold gap-6 px-12 xl:px-44 relative">
             <blockquote className="testimonial-text">
