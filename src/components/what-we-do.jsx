@@ -81,7 +81,7 @@ export default function WhatWeDo({scrollTo, refs}) {
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start py-20 xl:py-36 gap-12  px-6">
           
         
-              <h2 className="box text-4xl sm:text-5xl lg:text-6xl font-semibold w-full">What we do</h2>
+              <h2 className="box text-4xl sm:text-5xl xl:text-6xl font-semibold w-full">What we do</h2>
             <div className=" flex flex-col lg:flex-row gap-6 md:gap-12">
               <div className="box flex flex-col px-0  gap-6 w-full lg:w-1/2">
                 <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active box text-gray-400 text-3xl sm:text-4xl lg:text-5xl font-semibold cursor-pointer">Digital project management</h3>

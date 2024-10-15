@@ -146,10 +146,20 @@ span.box-right {
     transition: opacity 0.5s ease, height 0.5s ease;
 }
 
-
 #what-we-do ul.active {
     opacity: 1 !important;
     height: auto !important
+}
+
+.controls button span {
+    background: var(--bg-licorice);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.controls button:hover span {
+    background: var(--bg-tomato) !important;
 }
 
 .nav {
