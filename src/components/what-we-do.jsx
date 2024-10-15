@@ -102,11 +102,11 @@ export default function WhatWeDo({scrollTo, refs}) {
                 </ul>
                 
                 <ul ref={listRef2} id="creativeProductionList" className="flex flex-col gap-6">
-                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Print (press, POS and OOH)</li>
-                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
-                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">PR and events</li>
-                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Audio production</li>
-                  <li className="box text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Video production</li>
+                  <li className="text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Print (press, POS and OOH)</li>
+                  <li className="text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
+                  <li className="text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">PR and events</li>
+                  <li className="text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Audio production</li>
+                  <li className="text-2xl sm:text-3xl lg:text-4xl font-syne font-semibold">Video production</li>
               </ul>
                  
               </div>

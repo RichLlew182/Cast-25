@@ -51,10 +51,17 @@ h6 {
 
 hr {
     border-color: var(--bg-licorice);
+    width: 00;
+    opacity: 0;
+    -webkit-transition: width .5s ease, opacity .5s ease !important;
+    -o-transition: width .5s ease, opacity .5s ease !important;
+    transition: width .5s ease, opacity .5s ease !important;
 }
 
 hr.active {
     border-color: var(--bg-white);
+    opacity: 1 !important;
+    width: 100%;
 }
 
 .fa-circle-arrow-up {
@@ -114,13 +121,17 @@ span.box-right {
 }
 
 #what-we-do ul {
-    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: opacity 0.5s ease, height 0.5s ease;
+    -o-transition: opacity 0.5s ease, height 0.5s ease;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 #what-we-do ul.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    opacity: 1 !important;
+    height: auto !important;
 }
 
 @media (max-width : 767px) {
