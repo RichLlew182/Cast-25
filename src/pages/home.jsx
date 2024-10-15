@@ -1,7 +1,6 @@
 import { FooterBottom } from "../components/footer";
 import React, {useRef } from "react";
 import AboveFold from "../components/above-fold";
-import { MainMenu } from "../components/navbar";
 import BelowFold from "../components/below-fold";
 import WhatWeDo from "../components/what-we-do";
 import HowWeDoIt from "../components/how-we-do-it";
@@ -34,8 +33,6 @@ export default function Home() {
   
     return (
       <>
-        
-        <MainMenu scrollTo={scrollTo}  refs={refs}/>
   
         <AboveFold scrollTo={scrollTo} refs={refs}/>
         <main>

@@ -91,6 +91,7 @@ a:hover .fa-circle-arrow-up {
 
 section {
     overflow: hidden;
+    position: relative;
 }
 
 nav a {
@@ -125,6 +126,11 @@ span.box-right {
     transform: translate(150px, 0px);
 }
 
+/* #clients img {
+    max-width: 10vw;
+    max-height: 90px;
+} */
+
 #what-we-do ul {
     opacity: 0;
     height: 0;
@@ -140,41 +146,40 @@ span.box-right {
     height: auto !important
 }
 
+.nav {
+    overflow: hidden;
+    top: 0;
+    right: -100%;
+    background: var(--bg-tomato);
+    z-index: 0;
+    left: 100%;
+    opacity: 0;
+}
 
-@media (max-width : 767px) {
+.nav.open {
+    opacity: 1;
+    background: var(--bg-tomato);
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
 
-    .nav {
-        opacity: 1;
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        transform: translateX(100%);
-        overflow: hidden;
-        -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-        transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-        -o-transition: opacity 0.5s ease, transform 0.5s ease;
-        transition: opacity 0.5s ease, transform 0.5s ease;
-        transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
-        position: absolute;
-        top: 0;
-    }
+.nav li a,
+.nav li a svg {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
 
+@media (max-width : 639px) {
+
+    .nav,
     .nav.open {
-        opacity: 1;
-        -webkit-transform: translateX(00%);
-        -ms-transform: translateX(00%);
-        transform: translateX(00%);
-        -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-        transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-        -o-transition: opacity 0.5s ease, transform 0.5s ease;
-        transition: opacity 0.5s ease, transform 0.5s ease;
-        transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        background: var(--bg-tomato);
-        left: 0;
-        right: 0;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
     }
+
 
     span.box-left,
     span.box-right {
@@ -185,3 +190,31 @@ span.box-right {
 
 
 }
+
+@media (min-width : 640px) {
+
+    .nav,
+    .nav-open {
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+}
+
+@media (min-width : 768px) {}
+
+@media (min-width : 1024px) {}
+
+@media (min-width : 1280px) {
+
+    .nav {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+        opacity: 1;
+    }
+
+}
+
+@media (min-width : 1536px) {}
