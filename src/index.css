@@ -77,6 +77,9 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease;
 }
 
 a:hover {
@@ -126,10 +129,13 @@ span.box-right {
     transform: translate(150px, 0px);
 }
 
-/* #clients img {
-    max-width: 10vw;
-    max-height: 90px;
-} */
+#clients img {
+    max-height: 5vw;
+}
+
+.clients-marquee {
+    gap: 7vw;
+}
 
 #what-we-do ul {
     opacity: 0;
@@ -166,9 +172,7 @@ span.box-right {
 
 .nav li a,
 .nav li a svg {
-    -webkit-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+    transition: color .3s ease, transform .2s ease, -webkit-transform .2s ease !important;
 }
 
 @media (max-width : 639px) {
@@ -178,6 +182,10 @@ span.box-right {
         -webkit-transition: all .5s ease;
         -o-transition: all .5s ease;
         transition: all .5s ease;
+    }
+
+    #clients img {
+        max-height: 10vw;
     }
 
 
