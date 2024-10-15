@@ -2,16 +2,16 @@
 "use client";
 
 import { Footer } from "flowbite-react";
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-export function FooterBottom({ footerRef }) {
+export function FooterBottom({ refs }) {
 
-    const main = useRef();
+     const main = useRef();
 
     useGSAP(
       () => {
@@ -25,7 +25,7 @@ export function FooterBottom({ footerRef }) {
               start: '-50% bottom',
               end: 'bottom 70%',
                 scrub: true,
-                // markers: true,
+                //  markers: true,
             },
           });
         });
@@ -35,11 +35,11 @@ export function FooterBottom({ footerRef }) {
 
 
   return (
-      <Footer className="flex flex-col bg-licorice text-white rounded-none  font-syne lining-nums font-semibold p-0">
-          <div id="footerTop" ref={footerRef} className=" w-full">
-              <div  className="container flex mx-auto justify-center py-32 md:py-48 px-6">
+      <Footer id="footer"className="flex flex-col bg-licorice text-white rounded-none  font-syne lining-nums font-semibold p-0">
+          <div ref={refs.footer} id="footerTop"  className=" w-full">
+              <div  ref={main}className="container flex mx-auto justify-center py-32 md:py-48 px-6">
                   <a  className="text-3xl sm:text-5xl lg:text-6xl xl:text-8xl text-white" href="mailto:hello@cast25.com?subject=Hello CAST25">
-                      <div className="text-center"ref={main}>
+                      <div className="text-center">
                       <span className="box box-left">hello</span>
                       <span className="text-tomato">@</span>
                           <span className="box box-right">cast25.com</span>
