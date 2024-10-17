@@ -185,6 +185,10 @@ span.box-right {
     transition: color .3s ease, transform .2s ease, -webkit-transform .2s ease !important;
 }
 
+#step5 {
+    z-index: 1;
+}
+
 @media (max-width : 639px) {
 
     .nav,
