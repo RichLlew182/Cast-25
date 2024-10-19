@@ -16,8 +16,8 @@ const CustomTheme =  {
       },
     carousel: {
         root: {
-        leftControl: "controls absolute left-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none",
-        rightControl: "controls absolute right-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none"
+        leftControl: "controls prev absolute left-0 top-0 flex h-full items-center justify-center px-0 focus:outline-none",
+        rightControl: "controls next absolute right-0 top-0 flex h-full items-center justify-center px-0 focus:outline-none"
       },
         indicators: {
           active: {

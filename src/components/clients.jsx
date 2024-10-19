@@ -15,8 +15,8 @@ export default function Clients({ scrollTo, refs }) {
     const clients2 = document.querySelector('#clients-2');
 
     if (clients1 && clients2) {
-      gsap.set(clients1, { x: '-100%' });
-      gsap.set(clients2, { x: '0%' });
+      gsap.set(clients1, { x: '-90%' });
+      gsap.set(clients2, { x: '-10%' });
 
       gsap.to(clients1, {
         x: '-75%',
