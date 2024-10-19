@@ -62,11 +62,9 @@ export default function HowWeDoIt({ scrollTo, refs }) {
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 px-6">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl ">How we do it</h2>
 
-          <div className="steps flex flex-col bg-white  p-10 md:p-20 gap-6">
-            <h3 className="text-2xl sm:text-4xl  ">{steps[count].title}</h3>
-            <p className="text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
-            <p className="text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
-            <div className="flex flex-row gap-6">
+          <div className="steps flex flex-row bg-white gap-12 p-10 md:p-20 ">
+
+            <div className="flex flex-col gap-6">
               <button onClick={() => loadStep(0)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
                 } text-licorice`}>1</button>
               <button onClick={() => loadStep(1)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
@@ -78,6 +76,14 @@ export default function HowWeDoIt({ scrollTo, refs }) {
               <button onClick={() => loadStep(4)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
                 } text-licorice`}>5</button>
             </div>
+
+            <div className="flex flex-col gap-6">
+              <h3 className="text-2xl sm:text-4xl  ">{steps[count].title}</h3>
+              <p className="text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
+              <p className="text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
+
+            </div>
+
 
           </div>
 
