@@ -62,7 +62,6 @@ export default function WhatWeDo({ scrollTo, refs }) {
           y: 100,
           opacity: 0,
           stagger: .3,
-          toggleActions: "play none none none",
           scrollTrigger: {
             trigger: box,
             start: 'top bottom',
