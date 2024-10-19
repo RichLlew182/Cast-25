@@ -26,7 +26,6 @@ export function FooterBottom({ refs }) {
             end: 'bottom 70%',
             scrub: true,
             once: true,
-            //  markers: true,
           },
         });
       });

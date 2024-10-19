@@ -69,6 +69,10 @@ h6 {
     color: var(--color-white)
 }
 
+.slide {
+    pointer-events: none;
+}
+
 #notFound .nav,
 #notFound #navbarToggle {
     display: none;
@@ -174,6 +178,14 @@ span.box-right {
 #what-we-do ul.active {
     opacity: 1 !important;
     height: auto !important
+}
+
+.carousel {
+    pointer-events: none;
+}
+
+.controls {
+    pointer-events: all;
 }
 
 .controls button span {

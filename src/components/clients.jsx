@@ -25,7 +25,6 @@ export default function Clients({ scrollTo, refs }) {
           start: 'top 90%',
           end: 'bottom 10%',
           scrub: true,
-          // markers: true,
         },
       });
 
@@ -36,7 +35,6 @@ export default function Clients({ scrollTo, refs }) {
           start: 'top 90%',
           end: 'bottom 10%',
           scrub: true,
-          // markers: true,
         },
       });
     }
@@ -53,7 +51,7 @@ export default function Clients({ scrollTo, refs }) {
 
       <section id="clients" className="bg-tomato">
         <div ref={refs.clients} className="clients-container container mx-auto flex  flex-col justify-center items-start  gap-16 py-20 xl:py-36 md:gap-24 px-6">
-          <h2 className="box fade text-4xl sm:text-5xl xl:text-6xl dark:text-white">Who we've worked with</h2>
+          <h2 className="box fade text-4xl sm:text-5xl xl:text-6xl ">Who we've worked with</h2>
 
           <div id="clients-1" className="clients-marquee relative flex flex-row">
 
