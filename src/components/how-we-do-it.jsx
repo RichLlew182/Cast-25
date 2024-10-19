@@ -10,22 +10,16 @@ gsap.registerPlugin(ScrollTrigger);
 export default function HowWeDoIt({ scrollTo, refs }) {
 
   const container = useRef();
-
   const [count, setCount] = useState(0);
-  let [buttonText, setButtonText] = useState('Next Step')
+  const [activeStep, setActiveStep] = useState(0);
+  // const [buttonText, setButtonText] = useState('Next Step');
 
-  const nextStep = function () {
-
-    if (count <= 3) {
-      console.log(count)
-      setCount(count + 1)
+  const loadStep = (step) => {
+    if (step <= 4) {
+      setActiveStep(step);
+      setCount(step)// Increment count safely using the function form of setState
     }
-
-    if (count === 3) {
-      setButtonText('Start your project')
-    }
-  }
-
+  };
 
   let steps = [{
     id: 1,
@@ -68,15 +62,26 @@ export default function HowWeDoIt({ scrollTo, refs }) {
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 px-6">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl ">How we do it</h2>
 
-          <div id="step1" className="steps flex flex-col bg-white  p-10 md:p-20 gap-6">
+          <div className="steps flex flex-col bg-white  p-10 md:p-20 gap-6">
             <h3 className="text-2xl sm:text-4xl  ">{steps[count].title}</h3>
             <p className="text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
             <p className="text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
-            <button onClick={nextStep} className="box fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">{buttonText}</button>
+            <div className="flex flex-row gap-6">
+              <button onClick={() => loadStep(0)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
+                } text-licorice`}>1</button>
+              <button onClick={() => loadStep(1)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
+                } text-licorice`}>2</button>
+              <button onClick={() => loadStep(2)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
+                } text-licorice`}>3</button>
+              <button onClick={() => loadStep(3)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
+                } text-licorice`}>4</button>
+              <button onClick={() => loadStep(4)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
+                } text-licorice`}>5</button>
+            </div>
 
           </div>
 
-          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="box fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
+          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
             Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
 
         </div>

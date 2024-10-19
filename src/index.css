@@ -180,6 +180,10 @@ span.box-right {
     height: auto !important
 }
 
+.step-fade {
+    opacity: 1;
+}
+
 .carousel {
     pointer-events: none;
 }
