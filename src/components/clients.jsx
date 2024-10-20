@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,29 @@ import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Clients({ scrollTo, refs }) {
+
+  const container = useRef()
+
+  useGSAP(
+    () => {
+      const boxes = gsap.utils.toArray('.box');
+      boxes.forEach((box) => {
+        gsap.from(box, {
+          y: 100,
+          opacity: 0,
+          stagger: .5,
+          scrollTrigger: {
+            trigger: box,
+            start: '-60% bottom',
+            end: 'bottom 50%',
+            scrub: true,
+            once: true,
+          },
+        });
+      });
+    },
+    { scope: container }
+  );
 
   useEffect(() => {
 
@@ -49,11 +72,11 @@ export default function Clients({ scrollTo, refs }) {
   return (
     <>
 
-      <section id="clients" className="bg-tomato">
-        <div ref={refs.clients} className="clients-container container mx-auto flex  flex-col justify-center items-start  gap-16 py-12 md:py-20 xl:py-36 md:gap-24 px-6">
+      <section ref={refs.clients} id="clients" className="bg-tomato">
+        <div ref={container} className="clients-container container mx-auto flex  flex-col justify-center items-start  gap-16 py-12 md:py-20 xl:py-36 md:gap-24 px-6">
           <h2 className="box fade text-4xl sm:text-5xl xl:text-6xl ">Who we've worked with</h2>
 
-          <div id="clients-1" className="clients-marquee relative flex flex-row">
+          <div id="clients-1" className="box clients-marquee relative flex flex-row">
 
             <img src="/images/client-logos/RCSE.png" width="210" height="auto" alt="Royal College of Surgeons of England Logo" className="clients object-contain" />
             <img src="/images/client-logos/sainsburys.png" width="210" height="auto" alt="Sainsburys Logo" className="clients object-contain" />
@@ -70,7 +93,7 @@ export default function Clients({ scrollTo, refs }) {
 
           </div>
 
-          <div id="clients-2" className="clients-marquee relative flex flex-row">
+          <div id="clients-2" className="box clients-marquee relative flex flex-row">
 
             <img src="/images/client-logos/CIPD.png" width="210" height="auto" alt="CIPD Logo" className="clients object-contain" />
             <img src="/images/client-logos/EE.png" width="210" height="auto" alt="EE Logo" className="clients object-contain" />
@@ -89,7 +112,7 @@ export default function Clients({ scrollTo, refs }) {
 
           </div>
 
-          <div className="w-full flex justify-center">
+          <div className="box w-full flex justify-center">
             <a href="#" onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="fade text-xl sm:text-2xl flex gap-2 font-syne font-bold text-licorice hover:text-white">
               Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
           </div>

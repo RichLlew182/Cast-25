@@ -45,26 +45,6 @@ h6 {
 
 /* Custom CSS */
 
-#progress {
-    position: fixed;
-    top: 20px;
-    right: -80px;
-    width: 350px;
-}
-
-.data {
-    stroke-width: 15;
-    fill: none;
-}
-
-.text {
-    font-family: sans-serif;
-    fill: #5f5f5f;
-    font-size: 20px;
-    font-weight: 600;
-    visibility: hidden;
-}
-
 .active {
     color: var(--color-white)
 }
@@ -183,10 +163,6 @@ span.box-right {
     height: auto !important
 }
 
-.step-fade {
-    opacity: 1;
-}
-
 .carousel {
     pointer-events: none;
 }
@@ -227,10 +203,6 @@ span.box-right {
 .nav li a,
 .nav li a svg {
     transition: color .3s ease, transform .2s ease, -webkit-transform .2s ease !important;
-}
-
-#step5 {
-    z-index: 1;
 }
 
 @media (max-width : 639px) {

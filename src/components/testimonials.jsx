@@ -4,6 +4,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Carousel, Flowbite } from "flowbite-react";
 import CustomTheme from "../theme/customTheme";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,15 +14,38 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Testimonials({ refs }) {
 
+  const container = useRef()
+
+  useGSAP(
+    () => {
+      const boxes = gsap.utils.toArray('.box');
+      boxes.forEach((box) => {
+        gsap.from(box, {
+          y: 100,
+          opacity: 0,
+          stagger: .5,
+          scrollTrigger: {
+            trigger: box,
+            start: '-60% bottom',
+            end: 'bottom 50%',
+            scrub: true,
+            once: true,
+          },
+        });
+      });
+    },
+    { scope: container }
+  );
+
   return (
     <section ref={refs.testimonials} className="bg-snow cursor-auto" id="testimonials">
 
-      <div className="container mx-auto flex  flex-col justify-center items-start gap-6  md:gap-14 py-12 md:py-20 xl:py-36  px-6">
+      <div ref={container} className="container mx-auto flex  flex-col justify-center items-start gap-6  md:gap-14 py-12 md:py-20 xl:py-36  px-6">
 
         <h2 className="box fade text-4xl sm:text-5xl xl:text-6xl ">Testimonials</h2>
 
         <Flowbite theme={{ theme: CustomTheme }}>
-          <Carousel slideInterval={5000} indicators={false} className="carousel h-auto">
+          <Carousel slideInterval={5000} indicators={false} className="box carousel h-auto">
 
             <div className="slide flex flex-col h-auto items-start justify-start gap-6 px-10 sm:px-16 md:px-20 xl:px-40 relative">
               <blockquote className="testimonial-text text-xl sm:text-2xl md:text-3xl lg:text-4xl font-syne font-semibold">

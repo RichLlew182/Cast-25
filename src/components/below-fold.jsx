@@ -22,7 +22,6 @@ export default function BelowFold({ refs }) {
             start: '-60% bottom',
             end: 'bottom 50%',
             scrub: true,
-            once: true,
           },
         });
       });

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { Progress } from "flowbite-react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -56,6 +57,27 @@ export default function HowWeDoIt({ scrollTo, refs }) {
     }
   };
 
+  useGSAP(
+    () => {
+      const boxes = gsap.utils.toArray('.box');
+      boxes.forEach((box) => {
+        gsap.from(box, {
+          y: 100,
+          opacity: 0,
+          stagger: .5,
+          scrollTrigger: {
+            trigger: box,
+            start: '-60% bottom',
+            end: 'bottom 50%',
+            scrub: true,
+            once: true,
+          },
+        });
+      });
+    },
+    { scope: container }
+  );
+
   let steps = [{
     id: 1,
     title: "Responding to your brief",
@@ -95,12 +117,12 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
       <section ref={refs.howWeDoIt} id="how-we-do-it" className="bg-snow">
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-12 md:py-20 xl:py-36 px-6">
-          <h2 className="text-4xl sm:text-5xl xl:text-6xl ">How we do it</h2>
+          <h2 className="box text-4xl sm:text-5xl xl:text-6xl ">How we do it</h2>
 
-          <div className="steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-20 ">
+          <div className="box steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-20 ">
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-20">
-              <div className="flex w-full md:w-auto justify-between md:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 md:gap-6">
+              <div className="flex w-full md:w-auto justify-between sm:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 sm:gap-6">
                 <button onClick={() => loadStep(0)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>1</button>
                 <button onClick={() => loadStep(1)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
@@ -116,7 +138,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
               <div className="flex flex-col gap-6">
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="fade-steps text-2xl sm:text-4xl">{steps[count].title}</h3>
+                  <h3 className="fade-steps text-3xl sm:text-4xl xl:text-5xl">{steps[count].title}</h3>
 
                   {steps[count].paragraphs.map((p, index) => {
                     return <p key={index} className="fade-steps text-lg md:text-xl">{p}</p>

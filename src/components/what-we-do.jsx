@@ -68,7 +68,6 @@ export default function WhatWeDo({ scrollTo, refs }) {
             start: 'top bottom',
             end: 'bottom 80%',
             scrub: true,
-            once: true,
 
           },
         });
