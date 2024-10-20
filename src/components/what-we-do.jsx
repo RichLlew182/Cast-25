@@ -86,7 +86,7 @@ export default function WhatWeDo({ scrollTo, refs }) {
 
           <h2 className="box text-4xl sm:text-5xl xl:text-6xl font-semibold w-full">What we do</h2>
           <div className=" flex flex-col lg:flex-row gap-4 md:gap-12">
-            <div className="box flex flex-col px-0  gap-4 w-full lg:w-1/2">
+            <div className="box flex flex-col px-0  gap-4 md:gap-6 w-full lg:w-1/2">
               <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active box text-gray-400 text-3xl sm:text-4xl xl:text-5xl font-semibold cursor-pointer">Digital project management</h3>
               <hr ref={hr1Ref} className="active box" />
               <h3 ref={button2Ref} onClick={() => handleActive(2)} className="box text-gray-400 text-3xl sm:text-4xl xl:text-5xl font-semibold cursor-pointer">Creative Production</h3>

@@ -80,7 +80,7 @@ h6 {
 
 hr {
     border-color: var(--bg-licorice);
-    width: 00;
+    width: 0%;
     opacity: 0;
     -webkit-transition: width .5s ease, opacity .5s ease !important;
     -o-transition: width .5s ease, opacity .5s ease !important;
@@ -91,6 +91,9 @@ hr.active {
     border-color: var(--bg-white);
     opacity: 1 !important;
     width: 100%;
+    -webkit-transition: width .5s ease, opacity .5s ease !important;
+    -o-transition: width .5s ease, opacity .5s ease !important;
+    transition: width .5s ease, opacity .5s ease !important;
 }
 
 .fa-circle-arrow-up {
