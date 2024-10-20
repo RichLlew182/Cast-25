@@ -51,7 +51,7 @@ export default function Testimonials({ refs }) {
               <blockquote className="testimonial-text text-xl sm:text-2xl md:text-3xl lg:text-4xl font-syne font-semibold">
                 <span className="text-tomato">“</span>Chris has great ability to seamlessly coordinate diverseteams and resources, ensuring that projects are delivered on time and within budget. His diligence and proactive approach to problem-solving are crucial in navigating comple challenges and ensuring project success. One of Chris’s notable qualities is his exceptional communication skills. He excels at fostering clear and ope lines of communication among team members, stakeholders and clients.<span className="text-tomato">”</span>
               </blockquote>
-              <p className="font-prompt text-lg sm:text-xl font-light">Emma Saunders - Avis Budget</p>
+              <p className="font-prompt text-lg sm:text-xl font-light">Emma Saunders | Avis Budget</p>
             </div>
 
             <div className="slide flex flex-col h-auto items-start justify-start gap-6 px-10 sm:px-16 md:px-20 xl:px-40 relative">
@@ -65,7 +65,7 @@ export default function Testimonials({ refs }) {
               <blockquote className="testimonial-text text-xl sm:text-2xl md:text-3xl lg:text-4xl font-syne font-semibold">
                 <span className="text-tomato">“</span>Chris led our multi-site project calmly and diligently, delivering on time and seamlessly integrating with our local team to ensure all parties understood deadlines and responsibilities - even as parts of the scope changed. He was an amazing team worker, consistently striving for excellence in the project and taking the time to understand the local context and nuances<span className="text-tomato">”</span>
               </blockquote>
-              <p className="font-prompt text-lg sm:text-xl font-light">Elena Hermosilla, Discovery Channel</p>
+              <p className="font-prompt text-lg sm:text-xl font-light">Elena Hermosilla | Discovery Channel</p>
             </div>
 
 
