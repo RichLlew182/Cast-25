@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faCircleArrowUp, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React, { useRef, useState } from "react";
 import gsap from "gsap";
+import { Progress } from "flowbite-react";
 // import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -12,12 +13,17 @@ export default function HowWeDoIt({ scrollTo, refs }) {
   const container = useRef();
   const [count, setCount] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
-  // const [buttonText, setButtonText] = useState('Next Step');
+  const [buttonText, setButtonText] = useState('Next');
 
   const loadStep = (step) => {
     if (step <= 4) {
+      setButtonText('Next')
       setActiveStep(step);
       setCount(step)// Increment count safely using the function form of setState
+    }
+
+    if (step === 4) {
+      setButtonText('Start your project')
     }
   };
 
@@ -62,36 +68,54 @@ export default function HowWeDoIt({ scrollTo, refs }) {
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 px-6">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl ">How we do it</h2>
 
-          <div className="steps flex flex-row bg-white gap-12 p-10 md:p-20 ">
+          <div className="steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 md:p-20 ">
 
-            <div className="flex flex-col gap-6">
-              <button onClick={() => loadStep(0)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
-                } text-licorice`}>1</button>
-              <button onClick={() => loadStep(1)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
-                } text-licorice`}>2</button>
-              <button onClick={() => loadStep(2)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
-                } text-licorice`}>3</button>
-              <button onClick={() => loadStep(3)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
-                } text-licorice`}>4</button>
-              <button onClick={() => loadStep(4)} className={`text-xl sm:text-2xl flex w-12 h-12 rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
-                } text-licorice`}>5</button>
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
+              <div className="flex w-full md:w-auto justify-between md:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 md:gap-6">
+                <button onClick={() => loadStep(0)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
+                  } text-licorice`}>1</button>
+                <button onClick={() => loadStep(1)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
+                  } text-licorice`}>2</button>
+                <button onClick={() => loadStep(2)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
+                  } text-licorice`}>3</button>
+                <button onClick={() => loadStep(3)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
+                  } text-licorice`}>4</button>
+                <button onClick={() => loadStep(4)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
+                  } text-licorice`}>5</button>
+              </div>
+
+              <div className="flex flex-col gap-6">
+
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-2xl sm:text-4xl">{steps[count].title}</h3>
+                  <p className="text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
+                  <p className="text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
+                </div>
+
+                <a href="#" onClick={(e) => {
+                  e.preventDefault(); e.stopPropagation();
+
+                  if (activeStep !== 4) {
+                    loadStep(count + 1);
+                  } else {
+                    scrollTo(refs.footer);
+                  }
+                }}
+
+                  className="text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 4 ? faCircleArrowRight : faCircleArrowUp} />
+
+                </a>
+
+              </div>
+
             </div>
 
-            <div className="flex flex-col gap-6">
-              <h3 className="text-2xl sm:text-4xl  ">{steps[count].title}</h3>
-              <p className="text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
-              <p className="text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
-
-            </div>
-
+            <Progress size="lg" progress={count * 25} color="red" className="w-full" />
 
           </div>
 
-          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange">
-            Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
-
         </div>
-      </section>
+      </section >
     </>
 
   );
