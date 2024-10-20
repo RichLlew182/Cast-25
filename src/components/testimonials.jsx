@@ -15,7 +15,7 @@ export default function Testimonials({ refs }) {
   return (
     <section ref={refs.testimonials} className="bg-snow cursor-auto" id="testimonials">
 
-      <div className="container mx-auto flex  flex-col justify-center items-start gap-6  md:gap-14 py-20 xl:py-36  px-6">
+      <div className="container mx-auto flex  flex-col justify-center items-start gap-6  md:gap-14 py-12 md:py-20 xl:py-36  px-6">
 
         <h2 className="box fade text-4xl sm:text-5xl xl:text-6xl ">Testimonials</h2>
 

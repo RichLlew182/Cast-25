@@ -65,10 +65,10 @@ export default function HowWeDoIt({ scrollTo, refs }) {
     <>
 
       <section ref={refs.howWeDoIt} id="how-we-do-it" className="bg-snow">
-        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-20 xl:py-36 px-6">
+        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-12 md:py-20 xl:py-36 px-6">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl ">How we do it</h2>
 
-          <div className="steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 md:p-20 ">
+          <div className="steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-20 ">
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="flex w-full md:w-auto justify-between md:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 md:gap-6">

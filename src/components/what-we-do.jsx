@@ -80,12 +80,12 @@ export default function WhatWeDo({ scrollTo, refs }) {
     <>
 
       <section ref={refs.whatWeDo} id="what-we-do" className="bg-licorice text-white">
-        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start py-20 xl:py-36 gap-12  px-6">
+        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start py-12 md:py-20 xl:py-36 gap-12  px-6">
 
 
           <h2 className="box text-4xl sm:text-5xl xl:text-6xl font-semibold w-full">What we do</h2>
-          <div className=" flex flex-col lg:flex-row gap-6 md:gap-12">
-            <div className="box flex flex-col px-0  gap-6 w-full lg:w-1/2">
+          <div className=" flex flex-col lg:flex-row gap-4 md:gap-12">
+            <div className="box flex flex-col px-0  gap-4 w-full lg:w-1/2">
               <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active box text-gray-400 text-3xl sm:text-4xl xl:text-5xl font-semibold cursor-pointer">Digital project management</h3>
               <hr ref={hr1Ref} className="active box" />
               <h3 ref={button2Ref} onClick={() => handleActive(2)} className="box text-gray-400 text-3xl sm:text-4xl xl:text-5xl font-semibold cursor-pointer">Creative Production</h3>
@@ -94,7 +94,7 @@ export default function WhatWeDo({ scrollTo, refs }) {
                 Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
             </div>
             <div className="flex flex-col p-0 w-full lg:w-1/2">
-              <ul ref={listRef1} id="projectManagementList" className="active flex flex-col gap-6">
+              <ul ref={listRef1} id="projectManagementList" className="active flex flex-col gap-4 md:gap-6">
                 <li className="box text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">Website builds / redesigns</li>
                 <li className="box text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">Content and tech migrations</li>
                 <li className="box text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">Rebranding projects</li>
@@ -103,7 +103,7 @@ export default function WhatWeDo({ scrollTo, refs }) {
                 <li className="box text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">Email marketing campaigns</li>
               </ul>
 
-              <ul ref={listRef2} id="creativeProductionList" className="flex flex-col gap-6">
+              <ul ref={listRef2} id="creativeProductionList" className="flex flex-col gap-4 md:gap-6">
                 <li className="text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">Print (press, POS and OOH)</li>
                 <li className="text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
                 <li className="text-2xl sm:text-3xl xl:text-4xl font-syne font-semibold">PR and events</li>
