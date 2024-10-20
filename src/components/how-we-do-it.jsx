@@ -3,7 +3,6 @@ import { faCircleArrowUp, faCircleArrowRight } from "@fortawesome/free-solid-svg
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { Progress } from "flowbite-react";
-// import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,17 +14,29 @@ export default function HowWeDoIt({ scrollTo, refs }) {
   const [activeStep, setActiveStep] = useState(0);
   const [buttonText, setButtonText] = useState('Next');
 
+  const [progressValue, setProgressValue] = useState(count * 25);
+
   useEffect(() => {
-    // Animate the fade-out effect
+    gsap.to({ val: progressValue }, {
+      val: count * 25,
+      duration: .75,
+      ease: 'power2.out',
+      onUpdate: function () {
+        setProgressValue(this.targets()[0].val);
+      }
+    });
+  }, [count, progressValue]);
+
+  useEffect(() => {
     gsap.to('.fade-steps', {
-      opacity: 0, // Fade out
-      duration: 0, // Duration of fade-out
+      opacity: 0,
+      duration: 0,
       onComplete: () => {
         gsap.to('.fade-steps', {
           delay: 0.2,
-          opacity: 1, // Fade in
-          duration: .75, // Duration of fade-in
-          stagger: 0.3, // Stagger the animation for each element
+          opacity: 1,
+          duration: .75,
+          stagger: 0.3,
         });
       }
     });
@@ -50,7 +61,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
     title: "Responding to your brief",
     paragraphs:
       ['Having interrogated your project requirements, we’ll return with a clear path to success, breaking down timelines, risks and budgets. ',
-        'If required, we can also propose potential third parties to deliver any expertise you don’t already have in-house, leaning on our vast network of trusted contacts.'
+        'If required, we can also propose potential third parties to deliver any expertise you don’t already have in-house, leaning on our vast network of trusted contacts.',
       ]
 
   }, {
@@ -106,8 +117,12 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
                 <div className="flex flex-col gap-6">
                   <h3 className="fade-steps text-2xl sm:text-4xl">{steps[count].title}</h3>
-                  <p className="fade-steps text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
-                  <p className="fade-steps text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
+
+                  {steps[count].paragraphs.map((p, index) => {
+                    return <p key={index} className="fade-steps text-lg md:text-xl">{p}</p>
+                  })
+                  }
+
                 </div>
 
                 <a href="#" onClick={(e) => {
@@ -128,7 +143,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
             </div>
 
-            <Progress size="lg" progress={count * 25} color="red" className="w-full" />
+            <Progress size="lg" progress={progressValue} color="red" className="w-full" />
 
           </div>
 
