@@ -29,7 +29,7 @@ export default function Testimonials({ refs }) {
               <p className="font-prompt text-lg sm:text-xl font-light">Emma Saunders - Avis Budget</p>
             </div>
 
-            <div className="fslide lex flex-col h-auto items-start justify-start gap-6 px-10 sm:px-16 md:px-20 xl:px-40 relative">
+            <div className="slide flex flex-col h-auto items-start justify-start gap-6 px-10 sm:px-16 md:px-20 xl:px-40 relative">
               <blockquote className="testimonial-text text-xl sm:text-2xl md:text-3xl lg:text-4xl font-syne font-semibold">
                 <span className="text-tomato">“</span>Andy was a great support and essentially became part of our team. Andy worked with us for a year, during which time Andy focused on what we needed to do and ensured it happened on time and to budget. He was always keen to ensure we understood what we were asking for and making sure it was what we really needed. If you’re looking for someone to get you on track and moving forward, he’s your guy.<span className="text-tomato">”</span>
               </blockquote>

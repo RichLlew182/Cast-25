@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp, faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
-import React, { useRef, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { Progress } from "flowbite-react";
 // import { useGSAP } from "@gsap/react";
@@ -15,11 +15,29 @@ export default function HowWeDoIt({ scrollTo, refs }) {
   const [activeStep, setActiveStep] = useState(0);
   const [buttonText, setButtonText] = useState('Next');
 
+  useEffect(() => {
+    // Animate the fade-out effect
+    gsap.to('.fade-steps', {
+      opacity: 0, // Fade out
+      duration: 0, // Duration of fade-out
+      onComplete: () => {
+        gsap.to('.fade-steps', {
+          delay: 0.2,
+          opacity: 1, // Fade in
+          duration: .75, // Duration of fade-in
+          stagger: 0.3, // Stagger the animation for each element
+        });
+      }
+    });
+  }, [count]); //
+
   const loadStep = (step) => {
     if (step <= 4) {
+
       setButtonText('Next')
       setActiveStep(step);
-      setCount(step)// Increment count safely using the function form of setState
+      setCount(step)// Increment count safely using the function form of setState 
+
     }
 
     if (step === 4) {
@@ -87,9 +105,9 @@ export default function HowWeDoIt({ scrollTo, refs }) {
               <div className="flex flex-col gap-6">
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-2xl sm:text-4xl">{steps[count].title}</h3>
-                  <p className="text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
-                  <p className="text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
+                  <h3 className="fade-steps text-2xl sm:text-4xl">{steps[count].title}</h3>
+                  <p className="fade-steps text-lg md:text-xl">{steps[count].paragraphs[0]}</p>
+                  <p className="fade-steps text-lg md:text-xl">{steps[count].paragraphs[1]}</p>
                 </div>
 
                 <a href="#" onClick={(e) => {
@@ -102,7 +120,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
                   }
                 }}
 
-                  className="text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 4 ? faCircleArrowRight : faCircleArrowUp} />
+                  className="fade-steps text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 4 ? faCircleArrowRight : faCircleArrowUp} />
 
                 </a>
 
