@@ -10,7 +10,8 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function FooterBottom({ refs }) {
-
+  
+  const currentYear = new Date().getFullYear();
   const main = useRef();
 
   useGSAP(
@@ -48,7 +49,7 @@ export function FooterBottom({ refs }) {
       </div>
       <div id="footerBottom" className="w-full bg-tomato py-6 md:py-12">
         <div className="container flex flex-col justify-center md:flex-row md:justify-between gap-2 px-6">
-          <Footer.Copyright className="text-xl sm:text-2xl flex justify-center text-licorice" by="CAST25" year={2024} />
+          <Footer.Copyright className="text-xl sm:text-2xl flex justify-center text-licorice" by="CAST25" year={currentYear} />
           <Footer.LinkGroup className="justify-center text-xl sm:text-2xl text-licorice ">
             <Footer.Link target="_blank" href="https://richllew.dev/">Design by richllew.dev</Footer.Link>
           </Footer.LinkGroup>
