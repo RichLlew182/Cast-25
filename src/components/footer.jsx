@@ -32,7 +32,7 @@ export function FooterBottom({ refs }) {
 
   return (
     <Footer id="footer" className="flex flex-col bg-licorice text-white rounded-none font-syne lining-nums font-semibold p-0">
-      <div ref={footerRef} id="footerTop" className="w-full">
+      <div ref={refs.footer} id="footerTop" className="w-full">
         <div ref={main} className="container flex mx-auto justify-center py-32 md:py-48 px-6">
           <a className="text-3xl sm:text-5xl lg:text-6xl xl:text-8xl text-white" href="mailto:hello@cast25.com?subject=Hello CAST25">
             <div className="text-center">
