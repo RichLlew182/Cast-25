@@ -123,15 +123,15 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-20">
               <div className="flex w-full md:w-auto justify-between sm:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 sm:gap-6">
-                <button onClick={() => loadStep(0)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(0)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>1</button>
-                <button onClick={() => loadStep(1)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(1)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>2</button>
-                <button onClick={() => loadStep(2)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(2)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>3</button>
-                <button onClick={() => loadStep(3)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(3)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>4</button>
-                <button onClick={() => loadStep(4)} className={`text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(4)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>5</button>
               </div>
 
