@@ -8,7 +8,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function FooterBottom({ footerRef }) {
+export function FooterBottom({ refs }) {
   
   const currentYear = new Date().getFullYear();
   const main = useRef();
