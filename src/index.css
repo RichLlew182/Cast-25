@@ -160,7 +160,8 @@ span.box-right {
 
 #what-we-do ul.active {
     opacity: 1 !important;
-    height: auto !important
+    height: auto !important;
+    overflow: visible
 }
 
 .carousel {
