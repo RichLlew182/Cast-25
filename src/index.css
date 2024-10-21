@@ -165,7 +165,9 @@ span.box-right {
 }
 
 .step-nums {
-    transtion: background-color ease .5s;
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
 }
 
 .carousel {
