@@ -164,6 +164,9 @@ span.box-right {
     overflow: visible
 }
 
+.step-nums {
+    transtion: background-color ease .5s;
+
 .carousel {
     pointer-events: none;
 }
