@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { MainMenu } from "../components/navbar";
 import { FooterBottom } from "../components/footer";
 import { useRef } from "react";
@@ -6,33 +8,47 @@ import { useGSAP } from "@gsap/react";
 
 export default function NotFound() {
 
-    const container = useRef();
-    const footerRef = useRef(null)
+  const container = useRef();
 
-    useGSAP(() => {
-        gsap.from(".fade", {opacity: 0, y: 20, stagger: 0.3, delay: .5});
-    }, { scope: container }); // 
-    
-    const scrollToFooter = () => {
-      footerRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+  useGSAP(() => {
+    gsap.from(".fade", { opacity: 0, y: 20, stagger: 0.3, delay: .5 });
+  }, { scope: container }); // 
 
-    return (
-        <>  
-        
-            <header className="absolute w-full">
-          <MainMenu scrollToFooter={scrollToFooter}/>
-        </header>
-  
-      <main ref={container}className="container mx-auto flex  min-h-screen flex-col justify-center items-start gap-6 py-32 px-6">
-        <h1 className="fade text-4xl lg:text-6xl xl:text-8xl dark:text-white">404 - Page not found</h1>
-        <h2 className="fade text-3xl  xl:text-4xl dark:text-white">Sorry, the page you are looking for does not exist.</h2>
-       
-            </main>
-            <FooterBottom footerRef={footerRef}/>
-   
-      </>
-      
-    );
+  const refs = {
+
+    footer: useRef(null),
+    workWithUs: useRef(null),
+    whatWeDo: useRef(null),
+    howWeDoIt: useRef(null),
+    clients: useRef(null),
+    testimonials: useRef(null)
+
   }
-  
+
+  const scrollTo = (refs) => {
+    refs.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <>
+
+      <section id="notFound" className="bg-tomato">
+        <MainMenu scrollTo={scrollTo} refs={refs} />
+        <div ref={container} className="container min-h-screen h-full mx-auto flex  flex-col justify-center items-start gap-6 py-36 xl:py-52 px-6">
+          <h1 className="fade text-4xl sm:text-5xl lg:text-6xl ">404 - Page not found</h1>
+          <h2 className="fade text-2xl">Sorry, the page you are looking for does not exist.</h2>
+          <div className="flex flex-col gap-2 md:flex-row md:gap-6">
+            <a href="/" className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
+              Go back</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
+              Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
+          </div>
+
+        </div>
+      </section>
+      <FooterBottom refs={refs} />
+
+    </>
+
+  );
+}

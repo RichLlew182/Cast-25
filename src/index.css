@@ -45,6 +45,37 @@ h6 {
 
 /* Custom CSS */
 
+.active {
+    color: var(--color-white)
+}
+
+.slide {
+    pointer-events: none;
+}
+
+#notFound .nav,
+#notFound #navbarToggle {
+    display: none;
+}
+
+hr {
+    border-color: var(--bg-licorice);
+    width: 0%;
+    opacity: 0;
+    -webkit-transition: width .5s ease, opacity .5s ease !important;
+    -o-transition: width .5s ease, opacity .5s ease !important;
+    transition: width .5s ease, opacity .5s ease !important;
+}
+
+hr.active {
+    border-color: var(--bg-white);
+    opacity: 1 !important;
+    width: 100%;
+    -webkit-transition: width .5s ease, opacity .5s ease !important;
+    -o-transition: width .5s ease, opacity .5s ease !important;
+    transition: width .5s ease, opacity .5s ease !important;
+}
+
 .fa-circle-arrow-up {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -58,6 +89,9 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease;
 }
 
 a:hover {
@@ -70,6 +104,11 @@ a:hover .fa-circle-arrow-up {
     transform: rotate(180deg);
 }
 
+section {
+    overflow: hidden;
+    position: relative;
+}
+
 nav a {
     -webkit-transition: ease .3s;
     -o-transition: ease .3s;
@@ -79,6 +118,11 @@ nav a {
 #navbarToggle {
     -webkit-box-shadow: none;
     box-shadow: none;
+    z-index: 10;
+}
+
+.logo {
+    z-index: 10;
 }
 
 span {
@@ -97,7 +141,107 @@ span.box-right {
     transform: translate(150px, 0px);
 }
 
-@media (max-width : 767px) {
+#clients img {
+    max-height: 3.75vw;
+}
+
+.clients-marquee {
+    gap: 6.5vw;
+}
+
+#what-we-do ul {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: opacity 0.5s ease, height 0.5s ease;
+    -o-transition: opacity 0.5s ease, height 0.5s ease;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+#what-we-do ul.active {
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible
+}
+
+.tab {
+    border: 1px solid var(--bg-licorice);
+    border-bottom: 1px solid white;
+}
+
+.tab.active {
+    border: 1px solid white;
+    border-bottom: 1px solid var(--bg-licorice);
+    border-radius: 4px 4px 0 0;
+}
+
+.step-nums {
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.carousel {
+    pointer-events: none;
+}
+
+.controls {
+    pointer-events: all;
+}
+
+.controls button span {
+    background: var(--bg-licorice);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.controls button:hover span {
+    background: var(--bg-tomato) !important;
+}
+
+.nav {
+    overflow: hidden;
+    top: 0;
+    right: -100%;
+    background: var(--bg-tomato);
+    z-index: 0;
+    left: 100%;
+    opacity: 0;
+}
+
+.nav.open {
+    opacity: 1;
+    background: var(--bg-tomato);
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav li a,
+.nav li a svg {
+    transition: color .3s ease, transform .2s ease, -webkit-transform .2s ease !important;
+}
+
+@media (max-width : 639px) {
+
+    .nav,
+    .nav.open {
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+    #clients img {
+        max-height: 10vw;
+    }
+
 
     span.box-left,
     span.box-right {
@@ -106,5 +250,54 @@ span.box-right {
         transform: translate(0px, 0px) !important;
     }
 
+    .controls.prev {
+        left: -10px;
+    }
+
+    .controls.next {
+        right: -10px;
+    }
+
 
 }
+
+@media (min-width : 640px) {
+
+    .nav,
+    .nav-open {
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+    }
+
+}
+
+@media (min-width : 768px) {}
+
+@media (min-width : 1024px) {
+
+    .tab {
+        border: none;
+        border-bottom: none;
+    }
+
+    .tab.active {
+        border: none;
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+}
+
+@media (min-width : 1280px) {
+
+    .nav {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+        opacity: 1;
+    }
+
+}
+
+@media (min-width : 1536px) {}
