@@ -14,11 +14,11 @@ export default {
       container: {
         center: true, // Centers the container by adding auto margin
         screens: {
-          'sm': '500px',  // Custom width for small screens
-          'md': '720px',  // Custom width for medium screens
-          'lg': '950px',  // Custom width for large screens
-          'xl': '1280px', // Custom width for extra-large screens
-          '2xl': '1320px', // Custom width for 2XL screens
+          sm: '500px',  // Custom width for small screens
+          md: '720px',  // Custom width for medium screens
+          lg: '950px',  // Custom width for large screens
+          xl: '950px', // Custom width for extra-large screens
+          '2xl': '1140px', // Custom width for 2XL screens
         },
       },
       fontFamily: {

@@ -97,14 +97,14 @@ export default function Clients({ scrollTo, refs }) {
 
             <img src="/images/client-logos/CIPD.png" width="210" height="auto" alt="CIPD Logo" className="clients object-contain" />
             <img src="/images/client-logos/EE.png" width="210" height="auto" alt="EE Logo" className="clients object-contain" />
-            <img src="/images/client-logos/airbnb.png" width="210" height="auto" alt="Airbnb Logo" className="clients object-contain" />
+            <img src="/images/client-logos/google.png" width="210" height="auto" alt="Google Logo" className="clients object-contain" />
             <img src="/images/client-logos/hyundai.png" width="210" height="auto" alt="Hyundai Logo" className="clients object-contain" />
             <img src="/images/client-logos/ovo-energy.png" width="210" height="auto" alt="Ovo Energy Logo" className="clients object-contain" />
             <img src="/images/client-logos/vodafone.png" width="210" height="auto" alt="Vodafone Logo" className="clients object-contain" />
             <img src="/images/client-logos/visa.png" width="210" height="auto" alt="Visa Logo" className="clients object-contain" />
             <img src="/images/client-logos/CIPD.png" width="210" height="auto" alt="CIPD Logo" className="clients object-contain" />
             <img src="/images/client-logos/EE.png" width="210" height="auto" alt="EE Logo" className="clients object-contain" />
-            <img src="/images/client-logos/airbnb.png" width="210" height="auto" alt="Airbnb Logo" className="clients object-contain" />
+            <img src="/images/client-logos/google.png" width="210" height="auto" alt="Google Logo" className="clients object-contain" />
             <img src="/images/client-logos/hyundai.png" width="210" height="auto" alt="Hyundai Logo" className="clients object-contain" />
             <img src="/images/client-logos/ovo-energy.png" width="210" height="auto" alt="Ovo Energy Logo" className="clients object-contain" />
             <img src="/images/client-logos/vodafone.png" width="210" height="auto" alt="Vodafone Logo" className="clients object-contain" />
