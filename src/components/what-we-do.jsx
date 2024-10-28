@@ -83,12 +83,12 @@ export default function WhatWeDo({ scrollTo, refs }) {
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start py-12 md:py-14 xl:py-24 gap-12  px-6">
 
 
-          <h2 className="box text-4xl sm:text-5xl font-semibold w-full">What we do</h2>
+          <h2 className="box text-4xl lg:text-5xl font-semibold w-full">What we do</h2>
           <div className=" flex flex-col lg:flex-row gap-4 md:gap-12">
             <div className="box flex flex-col px-0  gap-4 md:gap-6 w-full lg:w-1/2">
-              <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active box text-gray-400 text-3xl sm:text-4xl  font-semibold cursor-pointer">Digital project management</h3>
+              <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active box text-gray-400 text-3xl lg:text-4xl  font-semibold cursor-pointer">Digital project management</h3>
               <hr ref={hr1Ref} className="active box" />
-              <h3 ref={button2Ref} onClick={() => handleActive(2)} className="box text-gray-400 text-3xl sm:text-4xl  font-semibold cursor-pointer">Creative Production</h3>
+              <h3 ref={button2Ref} onClick={() => handleActive(2)} className="box text-gray-400 text-3xl lg:text-4xl  font-semibold cursor-pointer">Creative Production</h3>
               <hr ref={hr2Ref} className="box" />
               <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="hidden box fade text-xl sm:text-lg lg:flex gap-2 font-syne font-bold text-tomato hover:text-orange">
                 Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
@@ -117,7 +117,7 @@ export default function WhatWeDo({ scrollTo, refs }) {
 
           </div>
 
-          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="flex box fade text-xl sm:text-2xl lg:hidden gap-2 font-syne font-bold text-tomato hover:text-orange">
+          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="flex box fade text-xl sm:text-lg lg:hidden gap-2 font-syne font-bold text-tomato hover:text-orange">
             Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
 
         </div>

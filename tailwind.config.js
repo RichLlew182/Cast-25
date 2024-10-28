@@ -18,7 +18,7 @@ export default {
           md: '720px',  // Custom width for medium screens
           lg: '950px',  // Custom width for large screens
           xl: '950px', // Custom width for extra-large screens
-          '2xl': '1140px', // Custom width for 2XL screens
+          '2xl': '1050px', // Custom width for 2XL screens
         },
       },
       fontFamily: {

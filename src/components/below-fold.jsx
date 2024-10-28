@@ -34,7 +34,7 @@ export default function BelowFold({ refs }) {
 
       <section ref={refs.workWithUs} id="working-with-us" className="bg-snow">
         <div ref={container} className="container mx-auto flex flex-col justify-center items-start  gap-12 py-12 md:py-14 xl:py-24  px-6">
-          <h2 className="box fade text-4xl sm:text-5xl ">What working with us is like</h2>
+          <h2 className="box fade text-4xl lg:text-5xl ">What working with us is like</h2>
 
           <div className=" flex flex-col md:flex-row gap-6 md:gap-12">
 

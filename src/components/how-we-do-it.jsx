@@ -117,7 +117,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
       <section ref={refs.howWeDoIt} id="how-we-do-it" className="bg-snow">
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-12 md:py-14 xl:py-24 px-6">
-          <h2 className="box text-4xl sm:text-5xl ">How we do it</h2>
+          <h2 className="box text-4xl lg:text-5xl ">How we do it</h2>
 
           <div className="box steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-14 ">
 
@@ -138,7 +138,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
               <div className="flex flex-col gap-6">
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="fade-steps text-3xl sm:text-4xl ">{steps[count].title}</h3>
+                  <h3 className="fade-steps text-3xl lg:text-4xl ">{steps[count].title}</h3>
 
                   {steps[count].paragraphs.map((p, index) => {
                     return <p key={index} className="fade-steps text-lg md:text-base">{p}</p>

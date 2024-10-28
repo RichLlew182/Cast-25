@@ -142,11 +142,11 @@ span.box-right {
 }
 
 #clients img {
-    max-height: 5vw;
+    max-height: 3.75vw;
 }
 
 .clients-marquee {
-    gap: 6vw;
+    gap: 6.5vw;
 }
 
 #what-we-do ul {
