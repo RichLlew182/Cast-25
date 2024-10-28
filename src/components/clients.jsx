@@ -73,8 +73,8 @@ export default function Clients({ scrollTo, refs }) {
     <>
 
       <section ref={refs.clients} id="clients" className="bg-tomato">
-        <div ref={container} className="clients-container container mx-auto flex  flex-col justify-center items-start  gap-16 py-12 md:py-14 xl:py-24 md:gap-20 px-6">
-          <h2 className="box fade text-4xl lg:text-5xl ">Who we've worked with</h2>
+        <div ref={container} className="clients-container container mx-auto flex  flex-col justify-center items-start gap-12 sm:gap-16 py-12 md:py-14 xl:py-24 md:gap-20 px-6">
+          <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">Who we've worked with</h2>
 
           <div id="clients-1" className="box clients-marquee relative flex flex-row">
 

@@ -164,6 +164,17 @@ span.box-right {
     overflow: visible
 }
 
+.tab {
+    border: 1px solid var(--bg-licorice);
+    border-bottom: 1px solid white;
+}
+
+.tab.active {
+    border: 1px solid white;
+    border-bottom: 1px solid var(--bg-licorice);
+    border-radius: 4px 4px 0 0;
+}
+
 .step-nums {
     -webkit-transition-property: background-color;
     -o-transition-property: background-color;
@@ -263,7 +274,20 @@ span.box-right {
 
 @media (min-width : 768px) {}
 
-@media (min-width : 1024px) {}
+@media (min-width : 1024px) {
+
+    .tab {
+        border: none;
+        border-bottom: none;
+    }
+
+    .tab.active {
+        border: none;
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+}
 
 @media (min-width : 1280px) {
 
