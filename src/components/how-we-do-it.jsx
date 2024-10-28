@@ -94,7 +94,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
         'We can help you determine which communication tools to use or have the flexibility to work with any existing platforms you have, as well as agreeing meeting cadence and frequency with each stakeholder.']
   }, {
     id: 3,
-    title: "Choosing the right methodology",
+    title: "Choosing the right approach",
     paragraphs:
       ['Every project management approach has its virtues and we can work to any methodology. ',
         'Experience has taught us that most projects benefit from elements of all, but we can adopt fully Waterfall, Agile or Prince2 processes as your project or organisation necessitates.']
@@ -116,32 +116,32 @@ export default function HowWeDoIt({ scrollTo, refs }) {
     <>
 
       <section ref={refs.howWeDoIt} id="how-we-do-it" className="bg-snow">
-        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-12 md:py-20 xl:py-36 px-6">
-          <h2 className="box text-4xl sm:text-5xl xl:text-6xl ">How we do it</h2>
+        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start  gap-12 py-12 md:py-14 xl:py-24 px-6">
+          <h2 className="box text-4xl sm:text-5xl ">How we do it</h2>
 
-          <div className="box steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-20 ">
+          <div className="box steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-14 ">
 
-            <div className="flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-20">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-14">
               <div className="flex w-full md:w-auto justify-between sm:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 sm:gap-6">
-                <button onClick={() => loadStep(0)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(0)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>1</button>
-                <button onClick={() => loadStep(1)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(1)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>2</button>
-                <button onClick={() => loadStep(2)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(2)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 2 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>3</button>
-                <button onClick={() => loadStep(3)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(3)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 3 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>4</button>
-                <button onClick={() => loadStep(4)} className={`step-nums text-xl flex w-10 h-10 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
+                <button onClick={() => loadStep(4)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 4 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>5</button>
               </div>
 
               <div className="flex flex-col gap-6">
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="fade-steps text-3xl sm:text-4xl xl:text-5xl">{steps[count].title}</h3>
+                  <h3 className="fade-steps text-3xl sm:text-4xl ">{steps[count].title}</h3>
 
                   {steps[count].paragraphs.map((p, index) => {
-                    return <p key={index} className="fade-steps text-lg md:text-xl">{p}</p>
+                    return <p key={index} className="fade-steps text-lg md:text-base">{p}</p>
                   })
                   }
 
@@ -157,7 +157,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
                   }
                 }}
 
-                  className="fade-steps text-xl sm:text-2xl flex gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 4 ? faCircleArrowRight : faCircleArrowUp} />
+                  className="fade-steps text-xl sm:text-lg flex gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 4 ? faCircleArrowRight : faCircleArrowUp} />
 
                 </a>
 

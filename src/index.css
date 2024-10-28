@@ -165,8 +165,14 @@ span.box-right {
 }
 
 .step-nums {
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
     transition-property: background-color;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
     transition-duration: .5s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
     transition-timing-function: ease;
 }
 
@@ -257,7 +263,13 @@ span.box-right {
 
 @media (min-width : 768px) {}
 
-@media (min-width : 1024px) {}
+@media (min-width : 1024px) {
+
+    .container {
+        max-width: 950px;
+    }
+
+}
 
 @media (min-width : 1280px) {
 
