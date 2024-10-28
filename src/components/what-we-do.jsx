@@ -99,20 +99,20 @@ export default function WhatWeDo({ scrollTo, refs }) {
             </div>
             <div className="flex flex-col p-0 w-full lg:w-1/2">
               <ul ref={listRef1} id="projectManagementList" className="active flex flex-col gap-4 md:gap-6">
-                <li className="box text-xl md:text-2xl  font-syne font-semibold">Website builds / redesigns</li>
-                <li className="box text-xl md:text-2xl  font-syne font-semibold">Content and tech migrations</li>
-                <li className="box text-xl md:text-2xl  font-syne font-semibold">Rebranding projects</li>
-                <li className="box text-xl md:text-2xl  font-syne font-semibold">Localisation</li>
-                <li className="box text-xl md:text-2xl  font-syne font-semibold">Digital marketing activity</li>
-                <li className="box text-xl md:text-2xl  font-syne font-semibold">Email marketing campaigns</li>
+                <li className="box text-lg md:text-2xl  font-syne font-semibold">Website builds / redesigns</li>
+                <li className="box text-lg md:text-2xl  font-syne font-semibold">Content and tech migrations</li>
+                <li className="box text-lg md:text-2xl  font-syne font-semibold">Rebranding projects</li>
+                <li className="box text-lg md:text-2xl  font-syne font-semibold">Localisation</li>
+                <li className="box text-lg md:text-2xl  font-syne font-semibold">Digital marketing activity</li>
+                <li className="box text-lg md:text-2xl  font-syne font-semibold">Email marketing campaigns</li>
               </ul>
 
               <ul ref={listRef2} id="creativeProductionList" className="flex flex-col gap-4 md:gap-6">
-                <li className="text-xl md:text-2xl font-syne font-semibold">Print (press, POS and OOH)</li>
-                <li className="text-xl md:text-2xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
-                <li className="text-xl md:text-2xl font-syne font-semibold">PR and events</li>
-                <li className="text-xl md:text-2xl font-syne font-semibold">Audio production</li>
-                <li className="text-xl md:text-2xl font-syne font-semibold">Video production</li>
+                <li className="text-lg md:text-2xl font-syne font-semibold">Print (press, POS and OOH)</li>
+                <li className="text-lg md:text-2xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
+                <li className="text-lg md:text-2xl font-syne font-semibold">PR and events</li>
+                <li className="text-lg md:text-2xl font-syne font-semibold">Audio production</li>
+                <li className="text-lg md:text-2xl font-syne font-semibold">Video production</li>
               </ul>
 
             </div>
