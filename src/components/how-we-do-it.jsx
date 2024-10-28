@@ -141,7 +141,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
                   <h3 className="fade-steps text-2xl md:text-3xl xl:text-4xl ">{steps[count].title}</h3>
 
                   {steps[count].paragraphs.map((p, index) => {
-                    return <p key={index} className="fade-steps text-lg md:text-base">{p}</p>
+                    return <p key={index} className="fade-steps text-base">{p}</p>
                   })
                   }
 
