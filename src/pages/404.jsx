@@ -32,8 +32,6 @@ export default function NotFound() {
   return (
     <>
 
-      {/* <MainMenu refs={refs}/> */}
-
       <section id="notFound" className="bg-tomato">
         <MainMenu scrollTo={scrollTo} refs={refs} />
         <div ref={container} className="container min-h-screen h-full mx-auto flex  flex-col justify-center items-start gap-6 py-36 xl:py-52 px-6">
