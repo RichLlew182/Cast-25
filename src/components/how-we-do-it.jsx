@@ -102,7 +102,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
     id: 4,
     title: "Preparedness for problems",
     paragraphs:
-      ['We’re not naïve enough to think that there won’t be any bumps in the road, but our calm preparedness for such events means were are able to respond clearly and quickly.  ',
+      ['We’re not naïve enough to think that there won’t be any bumps in the road, but our calm preparedness for such events means we are able to respond clearly and quickly.  ',
         'Building in appropriate contingency to timings and budgets is a key tenet of our approach, to give you peace of mind that your project will stay on the right track.']
   }, {
     id: 5,

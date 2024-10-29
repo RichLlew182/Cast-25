@@ -45,11 +45,11 @@ export default function Testimonials({ refs }) {
         <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">Testimonials</h2>
 
         <Flowbite theme={{ theme: CustomTheme }}>
-          <Carousel slideInterval={5000} indicators={false} className="box carousel h-auto">
+          <Carousel pauseOnHover slideInterval={1000} indicators={false} className="box carousel h-auto">
 
             <div className="slide flex flex-col h-auto items-start justify-start gap-6 px-8 sm:px-16  xl:px-32 relative">
               <blockquote className="testimonial-text text-lg sm:text-2xl  lg:text-2xl font-syne font-semibold">
-                <span className="text-tomato">“</span>Chris has great ability to seamlessly coordinate diverseteams and resources, ensuring that projects are delivered on time and within budget. His diligence and proactive approach to problem-solving are crucial in navigating comple challenges and ensuring project success. One of Chris’s notable qualities is his exceptional communication skills. He excels at fostering clear and ope lines of communication among team members, stakeholders and clients.<span className="text-tomato">”</span>
+                <span className="text-tomato">“</span>Chris has great ability to seamlessly coordinate diverse teams and resources, ensuring that projects are delivered on time and within budget. His diligence and proactive approach to problem-solving are crucial in navigating complex challenges and ensuring project success. One of Chris’s notable qualities is his exceptional communication skills. He excels at fostering clear and open lines of communication among team members, stakeholders and clients.<span className="text-tomato">”</span>
               </blockquote>
               <p className="font-prompt text-lg sm:text-base font-light">Emma Saunders | Avis Budget</p>
             </div>
