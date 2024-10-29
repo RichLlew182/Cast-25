@@ -45,7 +45,7 @@ export default function Testimonials({ refs }) {
         <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">Testimonials</h2>
 
         <Flowbite theme={{ theme: CustomTheme }}>
-          <Carousel pauseOnHover slideInterval={1000} indicators={false} className="box carousel h-auto">
+          <Carousel pauseOnHover slideInterval={10000} indicators={false} className="box carousel h-auto">
 
             <div className="slide flex flex-col h-auto items-start justify-start gap-6 px-8 sm:px-16  xl:px-32 relative">
               <blockquote className="testimonial-text text-lg sm:text-2xl  lg:text-2xl font-syne font-semibold">
