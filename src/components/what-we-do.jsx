@@ -91,7 +91,7 @@ export default function WhatWeDo({ scrollTo, refs }) {
                 <hr ref={hr1Ref} className="active box hidden lg:block" />
               </div>
               <div className="flex flex-col gap-4 md:gap-6 w-1/2 lg:w-full h-auto">
-                <h3 ref={button2Ref} onClick={() => handleActive(2)} className="tab h-full flex flex-col justify-center box leading-6 px-4 py-2 sm:px-6 sm:py-4 lg:p-0 text-gray-400 text-lg md:text-3xl xl:text-4xl  font-semibold cursor-pointer">Creative Production</h3>
+                <h3 ref={button2Ref} onClick={() => handleActive(2)} className="tab h-full flex flex-col justify-center box leading-6 px-4 py-2 sm:px-6 sm:py-4 lg:p-0 text-gray-400 text-lg md:text-3xl xl:text-4xl  font-semibold cursor-pointer">Creative production</h3>
                 <hr ref={hr2Ref} className="box hidden lg:block" />
               </div>
               <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="hidden box fade text-xl sm:text-lg lg:flex gap-2 font-syne font-bold text-tomato hover:text-orange">
