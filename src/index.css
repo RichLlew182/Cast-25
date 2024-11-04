@@ -149,6 +149,10 @@ span.box-right {
     gap: 6.5vw;
 }
 
+#what-we-do {
+    min-height: 600px;
+}
+
 #what-we-do ul {
     opacity: 0;
     height: 0;
