@@ -179,6 +179,11 @@ span.box-right {
     border-radius: 4px 4px 0 0;
 }
 
+.steps {
+    min-height: 436px;
+    justify-content: space-between;
+}
+
 .step-nums {
     -webkit-transition-property: background-color;
     -o-transition-property: background-color;
