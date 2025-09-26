@@ -180,7 +180,9 @@ span.box-right {
 }
 
 .steps {
-    min-height: 436px;
+    min-height: 404px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
