@@ -1,7 +1,7 @@
 import { FooterBottom } from "../components/footer";
 import React, { useRef } from "react";
 import AboveFold from "../components/above-fold";
-import BelowFold from "../components/below-fold";
+import WorkWithUs from "../components/working-with-us";
 import WhatWeDo from "../components/what-we-do";
 import HowWeDoIt from "../components/how-we-do-it";
 import Testimonials from "../components/testimonials";
@@ -35,9 +35,9 @@ export default function Home() {
       <AboveFold scrollTo={scrollTo} refs={refs} />
       <main>
         <WhatWeDo scrollTo={scrollTo} refs={refs} />
+        <WorkWithUs scrollTo={scrollTo} refs={refs} />
         <HowWeDoIt scrollTo={scrollTo} refs={refs} />
         <Testimonials scrollTo={scrollTo} refs={refs} />
-        <BelowFold scrollTo={scrollTo} refs={refs} />
       </main>
 
       <FooterBottom refs={refs} />
