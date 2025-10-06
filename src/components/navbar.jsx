@@ -11,7 +11,7 @@ export function MainMenu({ scrollTo, refs }) {
     <Flowbite theme={{ theme: CustomTheme }}>
       <header className="absolute w-full bg-tomato z-10 ">
         <Navbar fluid rounded className="container py-12 px-6 sm:px-6 mx-auto bg-transparent">
-          <Navbar.Brand href="/" className="logo ">
+          <Navbar.Brand href="/" className="logo pointer-events-none opacity-0">
             <span className="self-center whitespace-nowrap text-2xl font-syne font-semibold lining-nums">CAST25</span>
           </Navbar.Brand>
           <Navbar.Toggle id="navbarToggle" className="xl:hidden p-0 text-licorice focus:border-none  focus:outline-none focus:shadow-none hover:bg-transparent" />

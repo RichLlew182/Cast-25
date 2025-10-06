@@ -15,11 +15,11 @@ export default function HowWeDoIt({ scrollTo, refs }) {
   const [activeStep, setActiveStep] = useState(0);
   const [buttonText, setButtonText] = useState('Next');
 
-  const [progressValue, setProgressValue] = useState(count * 25);
+  const [progressValue, setProgressValue] = useState(count * 33.3333);
 
   useEffect(() => {
     gsap.to({ val: progressValue }, {
-      val: count * 25,
+      val: count * 33.3333,
       duration: .75,
       ease: 'power2.out',
       onUpdate: function () {

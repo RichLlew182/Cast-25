@@ -19,11 +19,15 @@ export default function AboveFold({ scrollTo, refs }) {
       <section id="above-fold" ref={container} className="bg-tomato">
         <MainMenu scrollTo={scrollTo} refs={refs} />
         <div className="container min-h-screen h-full mx-auto flex  flex-col justify-center items-start gap-6 py-36 xl:py-52 px-6">
-          <h1 className="fade text-4xl sm:text-5xl lg:text-6xl ">Empowering teams to deliver with confidence
-          </h1>
+          <div className="flex flex-col gap-2" >
+            <h1 className="fade text-6xl sm:text-7xl lg:text-8xl font-semibold">CAST25
+            </h1>
+            <h2 className="fade text-4xl sm:text-5xl lg:text-6xl ">Empowering teams to deliver with confidence
+            </h2>
+          </div>
 
           <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.workWithUs) }} className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
-            Get started<FontAwesomeIcon icon={faCircleArrowUp} /></a>
+            Work with us<FontAwesomeIcon icon={faCircleArrowUp} /></a>
         </div>
       </section>
     </>

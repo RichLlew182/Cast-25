@@ -35,9 +35,9 @@ export default function Home() {
       <AboveFold scrollTo={scrollTo} refs={refs} />
       <main>
         <WhatWeDo scrollTo={scrollTo} refs={refs} />
-        <BelowFold scrollTo={scrollTo} refs={refs} />
         <HowWeDoIt scrollTo={scrollTo} refs={refs} />
         <Testimonials scrollTo={scrollTo} refs={refs} />
+        <BelowFold scrollTo={scrollTo} refs={refs} />
       </main>
 
       <FooterBottom refs={refs} />
