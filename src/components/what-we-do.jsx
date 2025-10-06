@@ -11,83 +11,6 @@ export default function WhatWeDo({ scrollTo, refs }) {
 
   const container = useRef();
 
-  const button1Ref = useRef(null);
-  const button2Ref = useRef(null);
-  const button3Ref = useRef(null);
-  const hr1Ref = useRef(null);
-  const hr2Ref = useRef(null);
-  const hr3Ref = useRef(null)
-  const listRef1 = useRef(null);
-  const listRef2 = useRef(null);
-  const listRef3 = useRef(null);
-
-  const handleActive = (buttonId) => {
-    if (buttonId === 1) {
-
-      console.log(button1Ref)
-
-      if (button1Ref.current.classList.contains('active')) {
-        return
-      } else {
-        button1Ref.current.classList.add('active');
-        button2Ref.current.classList.remove('active');
-        button3Ref.current.classList.remove('active');
-        hr1Ref.current.classList.add('active')
-        hr2Ref.current.classList.remove('active');
-        hr3Ref.current.classList.remove('active');
-        listRef1.current.classList.add('active');
-        listRef2.current.classList.remove('active');
-        listRef3.current.classList.remove('active');
-      }
-
-    } else if (buttonId === 2) {
-
-      console.log(button2Ref)
-
-      if (button2Ref.current.classList.contains('active')) {
-        return
-      }
-
-      else {
-        button2Ref.current.classList.add('active');
-        button1Ref.current.classList.remove('active');
-        button3Ref.current.classList.remove('active');
-        hr1Ref.current.classList.remove('active');
-        hr2Ref.current.classList.add('active');
-        hr3Ref.current.classList.remove('active');
-        listRef2.current.classList.add('active');
-        listRef1.current.classList.remove('active');
-        listRef3.current.classList.remove('active');
-      }
-
-
-    }
-
-    else if (buttonId === 3) {
-
-      console.log(button3Ref)
-
-      if (button3Ref.current.classList.contains('active')) {
-        return
-      }
-
-      else {
-        button3Ref.current.classList.add('active');
-        button1Ref.current.classList.remove('active');
-        button2Ref.current.classList.remove('active');
-        hr1Ref.current.classList.remove('active');
-        hr2Ref.current.classList.remove('active');
-        hr3Ref.current.classList.add('active');
-        listRef2.current.classList.remove('active');
-        listRef1.current.classList.remove('active');
-        listRef3.current.classList.add('active');
-      }
-
-
-    }
-
-  };
-
   useGSAP(
     () => {
       const boxes = gsap.utils.toArray('.box');
@@ -95,12 +18,12 @@ export default function WhatWeDo({ scrollTo, refs }) {
         gsap.from(box, {
           y: 100,
           opacity: 0,
-          stagger: .3,
+          stagger: .5,
           delay: 1,
           scrollTrigger: {
             trigger: box,
             start: 'top bottom',
-            end: 'bottom 80%',
+            end: 'bottom 90%',
             scrub: true,
 
           },
@@ -114,63 +37,40 @@ export default function WhatWeDo({ scrollTo, refs }) {
     <>
 
       <section ref={refs.whatWeDo} id="what-we-do" className="bg-licorice text-white">
-        <div ref={container} className="container mx-auto flex  flex-col justify-center items-start py-12 md:py-14 xl:py-24 gap-6 md:gap-12  px-6">
 
+        <div ref={container} className="container mx-auto flex flex-col justify-center items-start gap-6 md:gap-12 py-12 md:py-14 xl:py-24  px-6">
+          <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">How we can help you</h2>
 
-          <h2 className="box text-3xl md:text-4xl xl:text-5xl font-semibold w-full">How we can help you</h2>
-          <div className=" flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-12">
-            <div className="box flex flex-row lg:flex-col px-0  lg:gap-5  w-full lg:w-1/2">
-              <div className="flex flex-col gap-4 md:gap-6 w-1/2 lg:w-full h-auto">
-                <h3 ref={button1Ref} onClick={() => handleActive(1)} className="active tab flex flex-col justify-center h-full box leading-6 px-4 py-2 sm:px-6 sm:py-4 lg:p-0 text-gray-400 text-lg md:text-3xl xl:text-4xl  font-semibold cursor-pointer">Digital project management</h3>
-                <hr ref={hr1Ref} className="active box hidden lg:block" />
-              </div>
-              <div className="flex flex-col gap-4 md:gap-6 w-1/2 lg:w-full h-auto">
-                <h3 ref={button2Ref} onClick={() => handleActive(2)} className="tab h-full flex flex-col justify-center box leading-6 px-4 py-2 sm:px-6 sm:py-4 lg:p-0 text-gray-400 text-lg md:text-3xl xl:text-4xl  font-semibold cursor-pointer">Creative production</h3>
-                <hr ref={hr2Ref} className="box hidden lg:block" />
-              </div>
-              <div className="flex flex-col gap-4 md:gap-6 w-1/2 lg:w-full h-auto">
-                <h3 ref={button3Ref} onClick={() => handleActive(3)} className="tab h-full flex flex-col justify-center box leading-6 px-4 py-2 sm:px-6 sm:py-4 lg:p-0 text-gray-400 text-lg md:text-3xl xl:text-4xl  font-semibold cursor-pointer">Refine + Enhance</h3>
-                <hr ref={hr3Ref} className="box hidden lg:block" />
-              </div>
-              <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="hidden box fade text-xl sm:text-lg lg:flex gap-2 font-syne font-bold text-tomato hover:text-orange">
-                Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
-            </div>
-            <div className="flex flex-col p-0 w-full lg:w-1/2">
-              <ul ref={listRef1} id="projectManagementList" className="active flex flex-col gap-4 md:gap-6">
-                <li className="box text-lg md:text-2xl  font-syne font-semibold">Website builds / redesigns</li>
-                <li className="box text-lg md:text-2xl  font-syne font-semibold">Content and tech migrations</li>
-                <li className="box text-lg md:text-2xl  font-syne font-semibold">Rebranding projects</li>
-                <li className="box text-lg md:text-2xl  font-syne font-semibold">Localisation</li>
-                <li className="box text-lg md:text-2xl  font-syne font-semibold">Digital marketing activity</li>
-                <li className="box text-lg md:text-2xl  font-syne font-semibold">Email marketing campaigns</li>
-              </ul>
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-12">
 
-              <ul ref={listRef2} id="creativeProductionList" className="flex flex-col gap-4 md:gap-6">
-                <li className="text-lg md:text-2xl font-syne font-semibold">Print (press, POS and OOH)</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">PR and events</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">Audio production</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">Video production</li>
-              </ul>
-
-              <ul ref={listRef3} id="creativeProductionList" className="flex flex-col gap-4 md:gap-6">
-                <li className="text-lg md:text-2xl font-syne font-semibold">List 3</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">Social media (content production and campaign activity - incl. influencers)</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">PR and events</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">Audio production</li>
-                <li className="text-lg md:text-2xl font-syne font-semibold">Video production</li>
-              </ul>
-
+            <div className="box flex flex-col p-6 gap-6 border-solid border border-white w-lg-1/3">
+              <h3 className="text-2xl md:text-3xl xl:text-4xl ">
+                <span>Build </span><span class="text-tomato inline"> + </span><span> Empower</span>
+              </h3>
+              <p className="text-base">If you don’t have dedicated Project Managers in-house, we can create a structure that enables your existing team to manage projects with confidence and clarity. We simplify processes, introduce practical tools, and provide guidance so non-PMs can run projects efficiently within the framework we’ve built — ensuring consistency, control, and successful outcomes.</p>
             </div>
 
+            <div className="box flex flex-col p-6 gap-6 border-solid border border-white w-lg-1/3">
+              <h3 className="text-2xl md:text-3xl xl:text-4xl">
+                <span>Design </span><span class="text-tomato inline"> + </span><span> Enable</span>
+              </h3>
+              <p className="text-base">We design and implement a complete project management structure from the ground up — establishing governance, processes, and reporting tailored to your organisation. Once in place, your future Project Managers take ownership, supported by a framework that ensures clarity, accountability, and ongoing success.</p>
+            </div>
 
-
+            <div className="box flex flex-col p-6 gap-6 border-solid border border-white w-lg-1/3">
+              <h3 className="text-2xl md:text-3xl xl:text-4xl ">
+                <span>Refine </span><span class="text-tomato inline"> + </span><span> Enhance</span>
+              </h3>
+              <p className="text-base">If you already have a project management structure in place, we help you get the most from it. We review and optimise your current governance, processes, and reporting, ensuring they’re fit for purpose and aligned with your business goals. From there, your Project Managers continue with a more efficient and effective framework designed to drive results.</p>
+            </div>
           </div>
-
-          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="flex box fade text-xl sm:text-lg lg:hidden gap-2 font-syne font-bold text-tomato hover:text-orange">
-            Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
-
+          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="flex box fade text-xl sm:text-lg gap-2 font-syne font-bold text-tomato hover:text-orange">
+            Work with us<FontAwesomeIcon icon={faCircleArrowUp} /></a>
         </div>
+
+
+
+
       </section>
     </>
 

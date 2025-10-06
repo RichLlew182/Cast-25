@@ -18,7 +18,7 @@ export default function AboveFold({ scrollTo, refs }) {
 
       <section id="above-fold" ref={container} className="bg-tomato">
         <MainMenu scrollTo={scrollTo} refs={refs} />
-        <div className="container min-h-screen h-full mx-auto flex  flex-col justify-center items-start gap-6 py-36 xl:py-52 px-6">
+        <div className="container min-h-screen h-full mx-auto flex  flex-col justify-center items-start gap-8 py-36 xl:py-52 px-6">
           <div className="flex flex-col gap-2" >
             <h1 className="fade text-6xl sm:text-7xl lg:text-8xl font-semibold">CAST25
             </h1>
