@@ -53,7 +53,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
     }
 
     if (step === 3) {
-      setButtonText('Start your project')
+      setButtonText('Work with us')
     }
   };
 
