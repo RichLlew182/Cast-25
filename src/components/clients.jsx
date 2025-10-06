@@ -2,12 +2,10 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Clients({ scrollTo, refs }) {
+export default function Clients({ refs }) {
 
   const container = useRef()
 
@@ -112,10 +110,6 @@ export default function Clients({ scrollTo, refs }) {
 
           </div>
 
-          <div className="box w-full flex justify-center">
-            <a href="#" onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
-              Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
-          </div>
 
         </div>
       </section>

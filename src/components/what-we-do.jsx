@@ -43,21 +43,21 @@ export default function WhatWeDo({ scrollTo, refs }) {
 
           <div className="flex flex-col lg:flex-row gap-6 md:gap-12">
 
-            <div className="box flex flex-col p-6 gap-6 border-solid border border-white w-lg-1/3">
+            <div className="box flex flex-col p-6 gap-6 border-solid border-2 border-white w-lg-1/3">
               <h3 className="text-2xl md:text-3xl xl:text-4xl ">
                 <span>Build </span><span class="text-tomato inline"> + </span><span> Empower</span>
               </h3>
               <p className="text-base">If you don’t have dedicated Project Managers in-house, we can create a structure that enables your existing team to manage projects with confidence and clarity. We simplify processes, introduce practical tools, and provide guidance so non-PMs can run projects efficiently within the framework we’ve built — ensuring consistency, control, and successful outcomes.</p>
             </div>
 
-            <div className="box flex flex-col p-6 gap-6 border-solid border border-white w-lg-1/3">
+            <div className="box flex flex-col p-6 gap-6 border-solid border-2 border-white w-lg-1/3">
               <h3 className="text-2xl md:text-3xl xl:text-4xl">
                 <span>Design </span><span class="text-tomato inline"> + </span><span> Enable</span>
               </h3>
               <p className="text-base">We design and implement a complete project management structure from the ground up — establishing governance, processes, and reporting tailored to your organisation. Once in place, your future Project Managers take ownership, supported by a framework that ensures clarity, accountability, and ongoing success.</p>
             </div>
 
-            <div className="box flex flex-col p-6 gap-6 border-solid border border-white w-lg-1/3">
+            <div className="box flex flex-col p-6 gap-6 border-solid border-2 border-white w-lg-1/3">
               <h3 className="text-2xl md:text-3xl xl:text-4xl ">
                 <span>Refine </span><span class="text-tomato inline"> + </span><span> Enhance</span>
               </h3>

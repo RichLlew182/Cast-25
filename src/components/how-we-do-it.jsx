@@ -108,10 +108,10 @@ export default function HowWeDoIt({ scrollTo, refs }) {
         <div ref={container} className="container mx-auto flex  flex-col justify-center items-start gap-6 md:gap-12 py-12 md:py-14 xl:py-24 px-6">
           <h2 className="box text-3xl md:text-4xl xl:text-5xl ">This is how we do it</h2>
 
-          <div className="box steps flex flex-col md:flex-col  bg-white gap-6 md:gap-12 p-10 lg:p-14 ">
+          <div className="box steps flex flex-col md:flex-col bg-white gap-6 md:gap-8 p-10 lg:p-14 ">
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-14">
-              <div className="flex w-full md:w-auto justify-between sm:justify-start gap-auto flex-wrap flex-row md:flex-col gap-2 sm:gap-6">
+              <div className="flex w-full md:w-auto justify-start gap-auto flex-wrap flex-row md:flex-col gap-6 sm:gap-4">
                 <button onClick={() => loadStep(0)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 0 ? 'bg-tomato' : 'bg-snow'
                   } text-licorice`}>1</button>
                 <button onClick={() => loadStep(1)} className={`step-nums text-base flex w-8 h-8 lining-nums rounded items-center justify-center font-syne font-bold ${activeStep === 1 ? 'bg-tomato' : 'bg-snow'
@@ -125,7 +125,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
               <div className="flex flex-col gap-6">
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="fade-steps text-2xl md:text-3xl xl:text-4xl ">{steps[count].title}</h3>
+                  <h3 className="fade-steps text-2xl md:text-3xl xl:text-4xl sm:pe-6">{steps[count].title}</h3>
 
                   {steps[count].paragraphs.map((p, index) => {
                     return <p key={index} className="fade-steps text-base">{p}</p>
