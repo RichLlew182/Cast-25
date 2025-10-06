@@ -5,6 +5,7 @@ import WorkWithUs from "../components/working-with-us";
 import WhatWeDo from "../components/what-we-do";
 import HowWeDoIt from "../components/how-we-do-it";
 import Testimonials from "../components/testimonials";
+import OurPartnership from "../components/our-partnership";
 
 export default function Home() {
 
@@ -35,6 +36,7 @@ export default function Home() {
       <AboveFold scrollTo={scrollTo} refs={refs} />
       <main>
         <WhatWeDo scrollTo={scrollTo} refs={refs} />
+        <OurPartnership scrollTo={scrollTo} refs={refs} />
         <WorkWithUs scrollTo={scrollTo} refs={refs} />
         <HowWeDoIt scrollTo={scrollTo} refs={refs} />
         <Testimonials scrollTo={scrollTo} refs={refs} />
