@@ -39,7 +39,7 @@ export default function WhatWeDo({ scrollTo, refs }) {
       <section ref={refs.whatWeDo} id="what-we-do" className="bg-licorice text-white">
 
         <div ref={container} className="container mx-auto flex flex-col justify-center items-start gap-6 md:gap-12 py-12 md:py-14 xl:py-24  px-6">
-          <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">How we can help you</h2>
+          <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">Choose one of our Partnership Pillars</h2>
 
           <div className="flex flex-col lg:flex-row gap-6 md:gap-12">
 

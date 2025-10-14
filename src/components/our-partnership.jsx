@@ -41,7 +41,7 @@ export default function OurPartnership({ refs }) {
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
 
             <div className="box flex flex-col p-0 gap-6 lg:w-2/5">
-              <h2 className="text-3xl md:text-4xl xl:text-5xl">But our partnership doesn’t have to end there</h2>
+              <h2 className="text-3xl md:text-4xl xl:text-5xl">Extending our partnership</h2>
 
               <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.footer) }} className="hidden box fade text-xl sm:text-lg lg:flex gap-2 font-syne font-bold text-tomato hover:text-orange">
                 Work with us<FontAwesomeIcon icon={faCircleArrowUp} /></a>
@@ -53,7 +53,7 @@ export default function OurPartnership({ refs }) {
                 <h3 className="text-2xl md:text-3xl xl:text-4xl text-tomato">
                   Ongoing support
                 </h3>
-                <p className="text-base">Once we’ve set up or transformed your project management function, our relationship doesn’t have to stop there. We can continue to work alongside your team to ensure the structures,processes, and tools we’ve implemented are embedded successfully and deliver long-term value. This can include tailored mentoring for your project leads, upskilling team members to take on greater responsibility, and providing targeted training sessions that strengthen both technical project management capabilities and softer leadership skills.</p>
+                <p className="text-base">Once we’ve set up or transformed your project management function, our relationship doesn’t have to stop there. We can continue to work alongside your team to ensure the structures, processes, and tools we’ve implemented are embedded successfully and deliver long-term value. This can include tailored mentoring for your project leads, upskilling team members to take on greater responsibility, and providing targeted training sessions that strengthen both technical project management capabilities and softer leadership skills.</p>
               </div>
 
               <div className="box flex flex-col p-0 gap-6">

@@ -86,7 +86,7 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
   }, {
     id: 2,
-    title: "Reviewing recent projects / modelling future projects",
+    title: "Reviewing past projects / project pipeline",
     paragraphs:
       ['Understanding how and why previous projects were successful (or not) will help us identify where improvements can be made. Similarly, preparing for the type of work you hope to deliver will ensure you’re fully prepared.']
   }, {
@@ -124,13 +124,16 @@ export default function HowWeDoIt({ scrollTo, refs }) {
 
               <div className="flex flex-col gap-6">
 
-                <div className="flex flex-col gap-6">
-                  <h3 className="fade-steps text-2xl md:text-3xl xl:text-4xl sm:pe-6">{steps[count].title}</h3>
+                <div className="how-we-do-it-content">
+                  <div className="flex flex-col gap-6">
+                    <h3 className="fade-steps text-2xl md:text-3xl xl:text-4xl sm:pe-6">{steps[count].title}</h3>
 
-                  {steps[count].paragraphs.map((p, index) => {
-                    return <p key={index} className="fade-steps text-base">{p}</p>
-                  })
-                  }
+                    {steps[count].paragraphs.map((p, index) => {
+                      return <p key={index} className="fade-steps text-base">{p}</p>
+                    })
+                    }
+
+                  </div>
 
                 </div>
 
@@ -144,10 +147,9 @@ export default function HowWeDoIt({ scrollTo, refs }) {
                   }
                 }}
 
-                  className="fade-steps text-xl sm:text-lg flex gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 3 ? faCircleArrowRight : faCircleArrowUp} />
+                  className="fade-steps text-xl sm:text-lg flex justify-end gap-2 font-syne font-bold text-tomato hover:text-orange"> {buttonText}<FontAwesomeIcon icon={activeStep !== 3 ? faCircleArrowRight : faCircleArrowUp} />
 
                 </a>
-
               </div>
 
             </div>
