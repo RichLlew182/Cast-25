@@ -4,7 +4,6 @@ import AboveFold from "../components/above-fold";
 import BelowFold from "../components/below-fold";
 import WhatWeDo from "../components/what-we-do";
 import HowWeDoIt from "../components/how-we-do-it";
-import Clients from "../components/clients";
 import Testimonials from "../components/testimonials";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
     workWithUs: useRef(null),
     whatWeDo: useRef(null),
     howWeDoIt: useRef(null),
-    clients: useRef(null),
     testimonials: useRef(null)
 
   }
@@ -39,7 +37,6 @@ export default function Home() {
         <BelowFold scrollTo={scrollTo} refs={refs} />
         <WhatWeDo scrollTo={scrollTo} refs={refs} />
         <HowWeDoIt scrollTo={scrollTo} refs={refs} />
-        <Clients scrollTo={scrollTo} refs={refs} />
         <Testimonials scrollTo={scrollTo} refs={refs} />
       </main>
 

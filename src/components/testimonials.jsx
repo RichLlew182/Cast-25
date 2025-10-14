@@ -38,7 +38,7 @@ export default function Testimonials({ refs }) {
   );
 
   return (
-    <section ref={refs.testimonials} className="bg-snow cursor-auto" id="testimonials">
+    <section ref={refs.testimonials} className="bg-white cursor-auto" id="testimonials">
 
       <div ref={container} className="container mx-auto flex  flex-col justify-center items-start gap-6 md:gap-12 py-12 md:py-14 xl:py-24  px-6">
 
