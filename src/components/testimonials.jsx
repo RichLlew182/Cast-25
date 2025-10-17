@@ -42,7 +42,7 @@ export default function Testimonials({ refs }) {
 
       <div ref={container} className="container mx-auto flex  flex-col justify-center items-start gap-6 md:gap-12 py-12 md:py-14 xl:py-24  px-6">
 
-        <h2 className="box fade text-3xl md:text-4xl xl:text-5xl ">Testimonials</h2>
+        <h2 className="box fade text-3xl md:text-4xl xl:text-5xl">Testimonials</h2>
 
         <Flowbite theme={{ theme: CustomTheme }}>
           <Carousel pauseOnHover slideInterval={10000} indicators={false} className="box carousel h-auto">

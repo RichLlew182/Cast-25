@@ -34,9 +34,8 @@ export default function OurPartnership({ refs }) {
   return (
     <>
 
-      <section ref={refs.workWithUs} id="working-with-us" className="bg-snow">
+      <section ref={refs.extendingOurPartnership} id="extending-our-partnership" className="bg-white">
         <div ref={container} className="container mx-auto flex flex-col justify-center items-start gap-6 md:gap-12 py-12 md:py-14 xl:py-24  px-6">
-
 
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
 
