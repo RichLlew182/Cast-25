@@ -1,3 +1,3 @@
 # CAST25
 
-A react website for CAST25: a Dynamic and versatile project delivery consultancy
+A react website for CAST25: Empowering teams to deliver with confidence
