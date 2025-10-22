@@ -26,7 +26,7 @@ export default function AboveFold({ scrollTo, refs }) {
             </h2>
           </div>
 
-          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.whatWeDo) }} className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
+          <a href="#" onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollTo(refs.partnershipPillars) }} className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
             Work with us<FontAwesomeIcon icon={faCircleArrowUp} /></a>
         </div>
       </section>
