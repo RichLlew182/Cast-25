@@ -1,10 +1,10 @@
 import { FooterBottom } from "../components/footer";
 import React, { useRef } from "react";
 import AboveFold from "../components/above-fold";
-import BelowFold from "../components/below-fold";
-import WhatWeDo from "../components/what-we-do";
+import PartnershipPillars from "../components/partnership-pillars";
 import HowWeDoIt from "../components/how-we-do-it";
 import Testimonials from "../components/testimonials";
+import ExtendingOurPartnership from "../components/extending-our-partnership";
 
 export default function Home() {
 
@@ -14,7 +14,9 @@ export default function Home() {
     workWithUs: useRef(null),
     whatWeDo: useRef(null),
     howWeDoIt: useRef(null),
-    testimonials: useRef(null)
+    testimonials: useRef(null),
+    partnershipPillars: useRef(null),
+    extendingurPartnership: useRef(null)
 
   }
 
@@ -34,8 +36,8 @@ export default function Home() {
 
       <AboveFold scrollTo={scrollTo} refs={refs} />
       <main>
-        <BelowFold scrollTo={scrollTo} refs={refs} />
-        <WhatWeDo scrollTo={scrollTo} refs={refs} />
+        <PartnershipPillars scrollTo={scrollTo} refs={refs} />
+        <ExtendingOurPartnership scrollTo={scrollTo} refs={refs} />
         <HowWeDoIt scrollTo={scrollTo} refs={refs} />
         <Testimonials scrollTo={scrollTo} refs={refs} />
       </main>

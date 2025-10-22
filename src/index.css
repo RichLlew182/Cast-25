@@ -168,6 +168,10 @@ span.box-right {
     overflow: visible
 }
 
+.how-we-do-it-content {
+    min-height: 312px;
+}
+
 .tab {
     border: 1px solid var(--bg-licorice);
     border-bottom: 1px solid white;
@@ -180,7 +184,9 @@ span.box-right {
 }
 
 .steps {
-    min-height: 436px;
+    min-height: 388px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -270,6 +276,14 @@ span.box-right {
 
 }
 
+@media (min-width : 500px) {
+
+    .how-we-do-it-content {
+        min-height: 208px;
+    }
+
+}
+
 @media (min-width : 640px) {
 
     .nav,
@@ -281,7 +295,33 @@ span.box-right {
 
 }
 
-@media (min-width : 768px) {}
+@media (min-width : 720px) {
+
+    .how-we-do-it-content {
+        min-height: 128px;
+    }
+
+}
+
+@media (min-width : 768px) {
+
+    .how-we-do-it-content {
+        min-height: 192px;
+    }
+
+}
+
+@media (min-width : 950px) {
+
+    .how-we-do-it-content {
+        min-height: 132px;
+    }
+
+    .steps {
+        min-height: 312px;
+    }
+
+}
 
 @media (min-width : 1024px) {
 
@@ -296,6 +336,17 @@ span.box-right {
         border-radius: 0;
     }
 
+}
+
+@media (min-width: 1050px) {
+
+    .how-we-do-it-content {
+        min-height: 176px;
+    }
+
+    .steps {
+        min-height: 388px;
+    }
 }
 
 @media (min-width : 1280px) {

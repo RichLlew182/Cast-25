@@ -1,8 +1,15 @@
 const CustomTheme = {
   navbar: {
+
+    root: {
+      inner: {
+        base: "w-full flex flex-wrap items-center justify-end mx-0",
+      },
+    },
+
     collapse: {
       base: "nav w-full xl:block xl:w-auto",
-      list: "my-0 h-full flex flex-col justify-center xl:my-0 xl:flex-row xl:space-x-7",
+      list: "my-0 h-full flex flex-col justify-center xl:my-0 xl:flex-row xl:space-x-10",
       hidden: {
         "on": "",
         "off": "open"
@@ -12,6 +19,7 @@ const CustomTheme = {
     toggle: {
       base: 'text-white hover:bg-blue-700 focus:ring-blue-300', // Custom styles for toggle button
     },
+
 
   },
   progress: {
