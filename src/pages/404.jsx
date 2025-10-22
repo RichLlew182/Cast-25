@@ -41,7 +41,7 @@ export default function NotFound() {
             <a href="/" className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
               Go back</a>
             <a href="#" onClick={(e) => { e.preventDefault(); scrollTo(refs.footer) }} className="fade text-xl sm:text-lg flex gap-2 font-syne font-bold text-licorice hover:text-white">
-              Start your project<FontAwesomeIcon icon={faCircleArrowUp} /></a>
+              Work with us<FontAwesomeIcon icon={faCircleArrowUp} /></a>
           </div>
 
         </div>
